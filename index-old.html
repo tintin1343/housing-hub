@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap Template</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Template styles -->
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+        /* Necessary for full page carousel*/
+
+        html,
+        body {
+            height: 100%;
+        }
+        /* Navigation*/
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .top-nav-collapse {
+            background-color: #4285F4;
+        }
+
+        footer.page-footer {
+            background-color: #4285F4;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                /*background-color: #4285F4;*/
+                background-color: transparent;
+            }
+            .brand {
+                display:block;
+                float: right;
+                width: 20%;
+                height: 47px;
+                margin: 0;
+                margin-top: -28px;"
+            }
+        }
+        @media only screen and (min-width: 771px) {
+            .brand {
+                /*background-color: #4285F4;*/
+                display:none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="col-lg-14">
+    <img width="1621" height="737" src="http://mdbootstrap.com/wp-content/uploads/2016/09/food-order.jpg" class="img-fluid z-depth-1" alt="food-order" sizes="(max-width: 1621px) 100vw, 1621px">
+
+<!--Navbar-->
+<nav class="navbar navbar-dark navbar-fixed-top">
+    <!--Collapse button-->
+    <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="fa fa-bars white-text"></i></a>
+
+    <!--Content for large and medium screens-->
+    <div class="navbar-desktop">
+        <!--Navbar Brand-->
+        <a class="navbar-brand" href="index-old.html"><img src="images/hub_logo.png" class="img-fluid z-depth-1" sizes="(max-width: 200px) 10vw, 200px"/></a>
+        <!--Links-->
+        <ul class="nav navbar-nav pull-xs-right">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Feedback</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+            </li>
+        </ul>
+        <!--Search form-->
+        <form class="form-inline">
+            <input class="form-control" type="text" placeholder="Search">
+        </form>
+    </div>
+
+    <!-- Content for mobile devices-->
+    <div class="navbar-mobile">
+        <!--Navbar Brand-->
+        <a class="brand" href="index-old.html"><img src="images/hub_logo.png" class="img-fluid"/></a>
+
+        <ul class="side-nav" id="mobile-menu">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Feedback</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--/.Navbar-->
+</div>
+
+
+<!-- SCRIPTS -->
+
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+
+<script>
+    $(".button-collapse").sideNav();
+</script>
+
+<script type="text/javascript">
+    Waves.attach('.navbar li', ['waves-light']);
+    Waves.init();
+</script>
+
+</body>
+
+</html>

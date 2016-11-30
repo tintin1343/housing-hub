@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Housing-Hub | Calculators</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet">
+
+    <!-- Template styles -->
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+        /* Necessary for full page carousel*/
+
+        html,
+        body {
+            height: 100%;
+        }
+        /* Navigation*/
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .top-nav-collapse {
+            background-color: #4285F4;
+        }
+
+        footer.page-footer {
+            background-color: #4285F4;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                background-color: #4285F4;
+            }
+            .brand {
+                display: block;
+                float: right;
+                width: 23%;
+                height: 46px;
+                margin: 0;
+                margin-top: -46px;
+            }
+            .main-wrapper {
+                margin-top:70px;
+            }
+        }
+        @media only screen and (min-width: 771px) {
+            .brand {
+                /*background-color: #4285F4;*/
+                display:none;
+            }
+            .navbar {
+                /*background-color: #4285F4;*/
+                background-color: #4285F4;
+            }
+            .main-wrapper {
+                margin-top:100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<header class="col-lg-14">
+    <!--<img width="1621" height="300" src="../images/boston1.jpg" class="img-fluid" alt="welcome-banner">-->
+    <!--Navbar-->
+    <nav class="navbar navbar-dark primary-color navbar-fixed-top" style="box-shadow: none;">
+        <!--Collapse button-->
+        <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="fa fa-bars fa-3x white-text"></i></a>
+
+        <!--Content for large and medium screens-->
+        <div class="navbar-desktop">
+            <!--Navbar Brand-->
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/hub_logo.png" class="img-fluid" style="width: 70%;"/>
+            </a>
+            <!--Links-->
+            <ul class="nav navbar-nav pull-xs-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="finance.html">Finance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="calculators.html">Calculators <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="low-income.html">Eligibility</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Documents</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Planning</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ask an expert</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Credit Report</a>
+                </li>
+            </ul>
+            <!--Search form-->
+            <form class="form-inline">
+                <input class="form-control" type="text" placeholder="Search">
+            </form>
+        </div>
+
+        <!-- Content for mobile devices-->
+        <div class="navbar-mobile">
+            <!--Navbar Brand-->
+            <a class="brand" href="../index.html"><img src="../images/hub_logo.png" class="img-fluid"/></a>
+
+            <ul class="side-nav" id="mobile-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="finance.html">Finance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="calculators.html">Calculators <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="low-income.html">Eligibility</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Documents</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Planning</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ask an expert</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Credit Report</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar-->
+</header>
+<main>
+    <div class="main-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- FIRST SECTION-->
+                <div class="documentation col-lg-12" style="margin-top: 20px;">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="finance.html">Finance</a></li>
+                        <li class="breadcrumb-item active"><a href="calculators.html">Calculators</a></li>
+                    </ol>
+                    <br>
+                    <!--Calculator Code Starts-->
+                    <!--Naked Form-->
+                    <div class="card-block">
+
+                        <!--Header-->
+                        <div class="text-xs-center">
+                            <h3><i class="fa fa-calculator"></i> EMI Amount Calculator</h3>
+                            <hr class="mt-2 mb-2">
+                        </div>
+
+                        <!--Body-->
+                        <p class="text-xs-center">Calculate monthly EMI amount that you will be paying</p>
+                        <br>
+
+                        <!--Body-->
+                        <form name=calc method=POST>
+                        <div class="md-form">
+                            <i class="fa fa-money prefix"></i>
+                            <input type="text" id="form3" class="form-control" name="loan">
+                            <label for="form3" id="loan-label">Loan Amount</label>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-calendar prefix"></i>
+                            <input type="text" id="form2" class="form-control" name="months">
+                            <label for="form2" id="months-label">Loan Duration (in months)</label>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-percent prefix"></i>
+                            <input type="text" id="form32" class="form-control" name="rate">
+                            <label for="form34" id="rate-label">Interest Rate</label>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-money prefix"></i>
+                            <input type="text" id="form33" class="form-control" readonly name="pay" id="pay" value="">
+                            <label for="form8" id="pay-label">Monthly Payment (Calculated)</label>
+                        </div>
+
+                        <div class="text-xs-center">
+                            <!--<button class="btn btn-default" onclick="showpay()"> Submit</button>
+
+                            <button class="btn btn-reset">Reset </button>-->
+                            <input type=button onClick="showpay()" value="Calculate">
+                            <input type=reset value= Reset onClick="resetFields()">
+                        </div>
+                    </form>
+                    </div>
+
+                    <!--Naked Form-->
+                    <!--Calculator Code Ends-->
+                </div>
+                <!-- FIRST SECTION-->
+            </div>
+        </div>
+    </div>
+</main>
+<!--Footer-->
+<footer class="page-footer center-on-small-only">
+
+    <!--Footer Links-->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-3 offset-md-1">
+                <h5 class="title">About MONUM</h5>
+                <p>Boston’s Mayor’s Office of New Urban Mechanics (MONUM) serves as Mayor Martin J. Walsh’s civic innovation group.</p>
+
+                <p>Boston’s MONUM focuses on four major issue areas: Education, Engagement, the Streetscape, and Economic Development. To design, conduct and evaluate pilot projects in these areas, MONUM builds partnerships between constituents, academics, entrepreneurs, non-profits and City staff</p>
+            </div>
+            <!--/.First column-->
+
+            <hr class="hidden-md-up">
+
+            <!--Second column-->
+            <div class="col-md-2 offset-md-1">
+                <h5 class="title">Mayor's Office</h5>
+                <ul>
+                    <li><a href="index.html">City Hall</a></li>
+                    <li><a href="#!">Contact Us</a></li>
+                    <li><a href="#!">FAQ's</a></li>
+                    <li><a href="#!">Feedback</a></li>
+                </ul>
+            </div>
+            <!--/.Second column-->
+
+            <hr class="hidden-md-up">
+
+            <!--Third column-->
+            <div class="col-md-2">
+                <h5 class="title">Terms of Use</h5>
+                <ul>
+                    <li><a href="#!">Privacy Policy</a></li>
+                    <li><a href="#!">Terms & Conditions</a></li>
+                    <li><a href="#!">Legal</a></li>
+                    <li><a href="#!">Link 4</a></li>
+                </ul>
+            </div>
+            <!--/.Third column-->
+
+            <hr class="hidden-md-up">
+
+            <!--Fourth column-->
+            <div class="col-md-2">
+                <h5 class="title">Hub</h5>
+                <ul>
+                    <li><a href="../finance/finance.html">Finance</a></li>
+                    <li><a href="../house/house.html">House</a></li>
+                    <li><a href="../people/people.html">People</a></li>
+                    <li><a href="../process/process.html">Process</a></li>
+                </ul>
+            </div>
+            <!--/.Fourth column-->
+
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <hr>
+
+    <!--Call to action-->
+    <div class="call-to-action">
+        <h4>Contact Us</h4>
+        <ul>
+            <p>CCIS , Northeastern University |
+                Toll Free: 1-800-XXX-XXXX |
+                Fax: XXX-XXX-XXXX |
+                Email: <a href="mailto:XXX@XXX.com" >xxxx@xxx.com</a> |
+                Boston, MA</p>
+        </ul>
+    </div>
+    <!--/.Call to action-->
+
+    <!--Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            Copyright © 2016 <a href="index.html"> Housing Hub </a>
+
+        </div>
+    </div>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+
+
+<!-- SCRIPTS -->
+
+<!-- JQuery -->
+<script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="../js/mdb.min.js"></script>
+
+<script>
+    $(".button-collapse").sideNav();
+</script>
+
+<script type="text/javascript">
+    Waves.attach('.navbar li', ['waves-light']);
+    Waves.init();
+    /*refer: http://stackoverflow.com/questions/31751392/how-to-make-transparent-navbar-when-scroll-to-top-of-document*/
+    $(document).on('scroll', function (e) {
+        e.preventDefault();
+        /*  var o = $(document).scrollTop() / 500;
+         if (o > 1.000) { o = 1;} else {o = 100;}
+         var e = $('navbar-fixed-top');
+         $('.navbar-fixed-top').css('opacity', o);
+         $('.navbar-fixed-top').css('background-color', '#4285F4');*/
+        var navStart = $('.navbar-fixed-top').offset().top;
+        var scroll = $(window).scrollTop() /500;
+
+        if (scroll===0 && navStart===0) {
+            $('.navbar-fixed-top').css('opacity', 1);
+            $('.navbar-fixed-top').css('background-color', 'transparent');
+        } else {
+            $('.navbar-fixed-top').css('opacity', 1);
+            $('.navbar-fixed-top').css('background-color', '#4285F4');
+        }
+    });
+
+</script>
+
+<!--/*calculator login starts*/-->
+
+<script language="JavaScript">
+    <!--
+    function showpay() {
+        if ((document.calc.loan.value == null || document.calc.loan.value.length == 0) ||
+                (document.calc.months.value == null || document.calc.months.value.length == 0)
+                ||
+                (document.calc.rate.value == null || document.calc.rate.value.length == 0))
+        {
+            $("#pay-label").addClass("active");
+            document.calc.pay.value = "Incomplete data";
+        }
+        else
+        {
+            var princ = document.calc.loan.value;
+            var term  = document.calc.months.value;
+            var intr   = document.calc.rate.value / 1200;
+            document.calc.pay = document.calc.pay.onfocus;
+            $("#pay-label").addClass("active");
+            document.calc.pay.value = princ * intr / (1 - (Math.pow(1/(1 + intr), term)));
+        }
+
+// payment = principle * monthly interest/(1 - (1/(1+MonthlyInterest)*Months))
+
+    }
+
+    function resetFields() {
+        $("#loan-label").removeClass("active");
+        $("#months-label").removeClass("active");
+        $("#rate-label").removeClass("active");
+        $("#pay-label").removeClass("active");
+    }
+
+    // -->
+</script>
+<!--/*calculator logic ends*/-->
+
+</body>
+
+</html>
