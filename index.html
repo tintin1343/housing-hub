@@ -20,8 +20,11 @@
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
 
+    <!--Custom style-->
+    <link href="css/style.css" rel="stylesheet">
+
     <!-- Template styles -->
-    <style rel="stylesheet">
+   <!-- <style rel="stylesheet">
         /* TEMPLATE STYLES */
         /* Necessary for full page carousel*/
 
@@ -75,7 +78,7 @@
                 background-color: transparent !important;
             }
         }
-    </style>
+    </style>-->
 </head>
 
 <body>
@@ -128,27 +131,23 @@
             <!--Navbar Brand-->
             <a class="brand" href="index.html"><img src="images/hub_logo.png" class="img-fluid"/></a>
 
-            <ul class="side-nav" id="mobile-menu">
+            <ul class="side-nav collapsible collapsible-accordion scrolling-navbar" id="mobile-menu" style="height:100%">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="finance/finance.html">Finance</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="house/house.html">House</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="process/process.html">Process</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="people/people.html">People</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="wiki/wiki.html">Wiki</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="boston/boston.html">Boston</a>
+                <!-- Side navigation links -->
+                <li class="dropdown">
+                    <a class="collapsible-header waves-light dropdown dropdown-toggle" href="#">Sections</a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li class="nav-item"><a class="nav-link" href="finance/finance.html">Finance</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="house/house.html">House</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="process/process.html">Process</a>
+                                <li class="nav-item"> <a class="nav-link" href="people/people.html">People</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="wiki/wiki.html">Wiki</a></li>
+                                <li class="nav-item">  <a class="nav-link" href="boston/boston.html">Boston</a></li>
+                            </ul>
+                        </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>

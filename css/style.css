@@ -1,1 +1,55 @@
-/* YOUR CUSTOM STYLES */
+/* CUSTOM STYLES */
+/* TEMPLATE STYLES */
+/* Necessary for full page carousel*/
+
+html,
+body {
+    height: 100%;
+}
+/* Navigation*/
+
+.navbar {
+    background-color: transparent;
+}
+
+.top-nav-collapse {
+    background-color: #4285F4;
+}
+
+footer.page-footer {
+    background-color: #4285F4;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        /*background-color: #4285F4;*/
+        background-color: transparent;
+    }
+    .brand {
+        display: block;
+        float: right;
+        width: 23%;
+        height: 46px;
+        margin: 0;
+        margin-top: -46px;
+    }
+
+    #footer-desktop {
+        display:none;
+    }
+
+    #footer-desktop-hr {
+        display:none;
+    }
+
+}
+@media only screen and (min-width: 771px) {
+    .brand {
+        /*background-color: #4285F4;*/
+        display:none;
+    }
+    .navbar {
+        /*background-color: #4285F4;*/
+        background-color: transparent !important;
+    }
+}
