@@ -502,7 +502,17 @@
 
 <!-- Flip Card -->
 
-<script type="text/javascript" src="./flip_card.js"></script>
+<script type="text/javascript" >
+
+$('.flpbtn').click(function(){
+ 
+        console.log();
+ 
+        $(this).parent().parent().parent().parent().find('.card').toggleClass('flipped');
+
+    });
+
+</script>
 
 
 </body>
