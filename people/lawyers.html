@@ -16,6 +16,7 @@
 
     <!-- Material Design Bootstrap -->
     <link href="../css/mdb.min.css" rel="stylesheet">
+    
 
 
 
@@ -52,6 +53,52 @@
               background-position: center center;
               background-size: cover;
         }
+        
+        .flip {
+            -webkit-perspective: 800 important;
+            perspective: 800 important;
+
+            position: relative !important;
+            text-align: center;
+        }
+        .flip .card.flipped {
+          -webkit-transform: rotateY(-180deg) !important;
+            transform: rotateY(-180deg) !important;
+        }
+        .flip .card {
+
+          height: 100%;
+          -webkit-transform-style: preserve-3d !important;
+          -webkit-transition: 0.5s !important;
+            transform-style: preserve-3d !important;
+            transition: 0.5s !important;
+        }
+        .flip .card .face {
+            width: 100%;
+            height: 100%;
+            
+
+          -webkit-backface-visibility: hidden !important;
+            backface-visibility: hidden !important;
+          z-index: 2 !important;
+   
+        }
+        .flip .card .front {
+          position: absolute !important;
+           width: 100%;
+          z-index: 1 !important;
+
+        }
+        .flip .card .back {
+          -webkit-transform: rotateY(-180deg) !important;
+            transform: rotateY(-180deg) !important;
+            width: 100%;
+            height: 100%;
+        }
+        .flpbtn {
+            color: white !important;
+        }
+
 
         @media only screen and (max-width: 768px) {
             .navbar {
@@ -182,16 +229,63 @@
         <h2 class="col-lg-12"></h2>
         
         <div class="row text-xs-center">
+        
+        
+        
+
+        
 
             <div class="col-xs-6">
-                <div class="card">
-                    <img class="card-img-top user" src="https://randomuser.me/api/portraits/men/61.jpg" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Kyle Robertson</h4>
-                        <a href="#" class="btn btn-primary">Contact Info</a>
+            
+                <div class="flip">
+                        <div class="card">
+
+                        <div class="face front">
+
+                                 <img class="card-img-top user" src="https://randomuser.me/api/portraits/men/61.jpg" alt="Card image cap">
+                                <div class="card-block">
+                                    <h4 class="card-title">Kyle Robertson</h4>
+                                    <a   class="btn btn-primary flpbtn">Contact Info</a>
+                                </div>
+                    
+                        </div>
+                        <div class="face back">
+
+                                <div class="card-block">
+                                    <h5>W: (617)-516-1887</h5>
+                                    <h5>M: (617)-516-1889</h5>
+                                    <h5>E:kyle.robertson@example.com</h5>
+                                    <h5>Constitution St, Boston, MA</h5>
+                                    <a  class="btn btn-primary flpbtn">Flip Back</a>
+                                </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
+           </div>      
+<!-- 
+            
+               <div id="js-flip-1" class="flip">
+    <div class="card">
+        <div class="face front">
+            <img class="card-img-top user" src="https://randomuser.me/api/portraits/men/61.jpg" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Kyle Robertson</h4>
+                <a href="#" class="btn btn-primary">Contact Info</a>
+            </div>        
+        </div>
+        <div class="face back">
+            <img class="card-img-top user" src="https://randomuser.me/api/portraits/men/61.jpg" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Kyle Robertson</h4>
+                <a href="#" class="btn btn-primary">Contact Info</a>
+            </div>  
+        </div>
+    </div>
+</div>
+ -->
+            
+       
              
             <div class="col-xs-6">
                 <div class="card">
@@ -281,6 +375,8 @@
     <!--Footer Links-->
     <div class="container-fluid">
         <div class="row">
+        
+        
 
             <!--First column-->
             <div class="col-md-3 offset-md-1">
