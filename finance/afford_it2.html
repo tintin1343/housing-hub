@@ -345,9 +345,9 @@
             
             
             //hit budget api:
-            var loc = 'Boston-Cambridge-Quincy, MA-NH HUD Metro FMR Area|Massachusetts';
-            var action = 'epi_familybudget';
+
             var famil = '2P2C';
+            var reqdata = 'family='+famil+'&location=Boston-Cambridge-Quincy%2C+MA-NH+HUD+Metro+FMR+Area%7CMassachusetts&action=epi_familybudget'
 
           
 
@@ -355,11 +355,10 @@
                 url: 'www.epi.org/wp-admin/admin-ajax.php',
                 type: "POST",
                 crossDomain: true,
-                data:'action='+ action+'&location='+ loc+'&family='+famil,
+                data:reqdata,
                 dataType: 'jsonp',
-                jsonp: 'jsonp_callback',
                 success:function(result){
-                    alert(result);
+                    alert(JSON.stringify(result));
                 },
                 error:function(xhr,status,error){
                     alert(status);
