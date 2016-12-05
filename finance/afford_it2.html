@@ -180,48 +180,55 @@
 
                         <!--Header-->
                         <div class="text-xs-center">
-                            <h3><i class="fa fa-calculator"></i> Can I afford it Calculator</h3>
+                            <h3><i class="fa fa-calculator"></i> Can I Afford It?</h3>
                             <hr class="mt-2 mb-2">
                         </div>
 
                         <!--Body-->
-                        <p class="text-xs-center">Step 1: Estimate your total monthly home payment.</p>
+                        <p class="text-xs-center">Estimate what is left after subtracting your monthly debts.</p>
                         <br>
 
                         <!--Body-->
                         <form name=calc method=POST>
+                        
                         <div class="md-form">
                             <i class="fa fa-money prefix"></i>
-                            <input type="number" id="form11" class="form-control" name="pi">
-                            <label for="form11" id="pi-label">Principal and Interest (P&I)</label>
+                            <input type="number" id="form01" class="form-control" name="month">
+                            <label for="form01" id="month-label">Monthly Income after taxes</label>
+                        </div>
+                        
+                        <div class="md-form">
+                            <i class="fa fa-money prefix"></i>
+                            <input type="number" id="form11" class="form-control" name="paym">
+                            <label for="form11" id="paym-label">Monthly Home Payment</label>
                         </div>
 
                         <div class="md-form">
                             <i class="fa fa-money prefix"></i>
-                            <input type="number" id="form12" class="form-control" name="mortgage">
-                            <label for="form12" id="mortgage-label">Mortgage Insurance</label>
+                            <input type="number" id="form12" class="form-control" name="car">
+                            <label for="form12" id="car-label">Monthly Car Payments</label>
                         </div>
 
                         <div class="md-form">
                             <i class="fa fa-money prefix"></i>
-                            <input type="number" id="form13" class="form-control" name="taxes">
-                            <label for="form13" id="taxes-label">Property Taxes</label>
+                            <input type="number" id="form13" class="form-control" name="student">
+                            <label for="form13" id="student-label">Monthly Student Loan Payments</label>
                         </div>
                         <div class="md-form">
                             <i class="fa fa-money prefix"></i>
-                            <input type="number" id="form14" class="form-control" name="insurance">
-                            <label for="form14" id="insurance-label">Homeowner's Insurance</label>
+                            <input type="number" id="form14" class="form-control" name="credit">
+                            <label for="form14" id="credit-label">Monthly Credit Card payments</label>
                         </div>
                         <div class="md-form">
                             <i class="fa fa-money prefix"></i>
-                            <input type="number" id="form15" class="form-control" name="condo">
-                            <label for="form15" id="condo-label">HOA fees</label>
+                            <input type="number" id="form15" class="form-control" name="other">
+                            <label for="form15" id="other-label">￼￼￼Other Monthly payments</label>
                         </div>
 
                         <div class="md-form">
                             <i class="fa fa-money prefix"></i>
                             <input type="number" id="form16" class="form-control" readonly name="pay" id="pay" value="">
-                            <label for="form16" id="pay-label">Monthly Home Payment (Calculated)</label>
+                            <label for="form16" id="pay-label">Total Monthly Income Remaining (Calculated)</label>
                         </div>
 
                         <div class="text-xs-center">
@@ -229,7 +236,13 @@
 
                             <button class="btn btn-reset">Reset </button>-->
                             <input type=button onClick="showpay()" value="Calculate" class="primary-color" style="color:white">
-                            <input type=reset value= Reset onClick="resetFields()" class="primary-color" style="color:white">
+                            <input type=reset value= Reset onClick="resetFields()"  style="color:blue">
+                            <br>
+                            <br>
+                            <h5> Money left to cover utilities, groceries, child care, health insurance, repairs, and everything else:</h5>
+                            <h1 id="perc">N/A</h1>
+                            <p id="perc-text"></p>
+                        
                         </div>
                     </form>
                     </div>
@@ -308,23 +321,77 @@
 <script language="JavaScript">
     <!--
     function showpay() {
-        if (document.calc.pi.value == null || document.calc.mortgage.value == null ||
-                document.calc.taxes.value == null ||
-                document.calc.insurance.value == null || document.calc.condo.value == null)
+        if (document.calc.paym.value == null || document.calc.car.value == null ||
+                document.calc.student.value == null ||
+                document.calc.credit.value == null || document.calc.other.value == null
+                || document.calc.month.value == null)
         {
             $("#pay-label").addClass("active");
             document.calc.pay.value = "Incomplete data";
         }
         else
         {
-            var pi = parseFloat(document.calc.pi.value);
-            var mort  = parseFloat(document.calc.mortgage.value);
-            var taxes   = parseFloat(document.calc.taxes.value);
-            var insur = parseFloat(document.calc.insurance.value);
-            var condo = parseFloat(document.calc.condo.value);
+            var month = parseFloat(document.calc.month.value);
+            var paym = parseFloat(document.calc.paym.value);
+            var car  = parseFloat(document.calc.car.value);
+            var student   = parseFloat(document.calc.student.value);
+            var credit = parseFloat(document.calc.credit.value);
+            var other = parseFloat(document.calc.other.value);
             document.calc.pay = document.calc.pay.onfocus;
             $("#pay-label").addClass("active");
-            document.calc.pay.value = pi + mort + taxes + insur + condo;
+            var remain = month - (paym+car+student+credit+other);
+            document.calc.pay.value = remain;
+            
+            
+            
+            //hit budget api:
+            var loc = "Boston-Cambridge-Quincy, MA-NH HUD Metro FMR Area|Massachusetts";
+            var action = "epi_familybudget";
+            var famil = "2P2C";
+
+
+             $.ajax({
+                url: "http://www.epi.org/wp-admin/admin-ajax.php",
+                type: "POST",
+                crossDomain: true,
+                data:'action='+ action+'&location='+ loc+'&family='+famil,
+                dataType: "json",
+                success:function(result){
+                    alert(JSON.stringify(result));
+                },
+                error:function(xhr,status,error){
+                    alert(status);
+                }
+            });
+
+           var median_living = 2300;
+
+
+
+           
+            
+            if ( remain - median_living  > 1000 ){
+            
+                $("#perc").html(remain);
+                document.getElementById("perc").style.color = "green";
+                document.getElementById("perc-text").innerHTML = "Great! You can maintain this home.";
+            }
+            else if (remain - median_living  < 1000 && remain - median_living > 500) {
+            
+                $("#perc").html(remain);
+                document.getElementById("perc").style.color = "orange";
+                document.getElementById("perc-text").innerHTML = "Be cautious.Consider options such as buying a less expensive home or paying down debts.";
+            
+            }
+            else {
+            
+                $("#perc").html(remain);
+                document.getElementById("perc").style.color = "red";
+               document.getElementById("perc-text").innerHTML = "Consider options such as buying a less expensive home or paying down debts.";
+            
+            }
+            
+            
         }
 
 // payment = principle * monthly interest/(1 - (1/(1+MonthlyInterest)*Months))
