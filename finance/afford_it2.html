@@ -185,7 +185,7 @@
                         </div>
 
                         <!--Body-->
-                        <p class="text-xs-center">Estimate what is left after subtracting your monthly debts.</p>
+                        <p class="text-xs-center">Estimate what is left of your income after subtracting your monthly debts.</p>
                         <br>
 
                         <!--Body-->
@@ -194,7 +194,7 @@
                         <div class="md-form">
                             <i class="fa fa-money prefix"></i>
                             <input type="number" id="form01" class="form-control" name="month">
-                            <label for="form01" id="month-label">Monthly Income after taxes</label>
+                            <label for="form01" id="month-label">Monthly Income After Taxes</label>
                         </div>
                         
                         <div class="md-form">
@@ -217,12 +217,12 @@
                         <div class="md-form">
                             <i class="fa fa-money prefix"></i>
                             <input type="number" id="form14" class="form-control" name="credit">
-                            <label for="form14" id="credit-label">Monthly Credit Card payments</label>
+                            <label for="form14" id="credit-label">Monthly Credit Card Payments</label>
                         </div>
                         <div class="md-form">
                             <i class="fa fa-money prefix"></i>
-                            <input type="number" id="form15" class="form-control" name="other">
-                            <label for="form15" id="other-label">￼￼￼Other Monthly payments</label>
+                            <input type="number" id="form15" class="form-control" name="other" >
+                            <label for="form15" id="other-label">￼￼￼Other Monthly Payments</label>
                         </div>
 
                         <div class="md-form">
@@ -242,7 +242,7 @@
                             <h5> Money left to cover utilities, groceries, child care, health insurance, repairs, and everything else:</h5>
                             <h1 id="perc">N/A</h1>
                             <p id="perc-text"></p>
-                            <br>
+                            <p id="living-text"></p>
                             <p>Note: Median monthly living expenses in Boston based on one-child family data provided by the Economic Policy Institute.</p>
                             <a class="btn btn-primary" href="http://www.epi.org/resources/budget/" role="button">Learn More</a>
 
@@ -357,6 +357,7 @@
 
            
            var median_living = 618+1048+583+734+1001;
+           document.getElementById("living-text").innerHTML = "Median Monthly living costs in Boston: $"+median_living;
 
 
 
@@ -364,20 +365,20 @@
             
             if ( remain - median_living  > 1000 ){
             
-                $("#perc").html(remain);
+                $("#perc").html('$'+remain);
                 document.getElementById("perc").style.color = "green";
                 document.getElementById("perc-text").innerHTML = "Great! You can maintain this home.";
             }
             else if (remain - median_living  < 1000 && remain - median_living > 500) {
             
-                $("#perc").html(remain);
+                $("#perc").html('$'+remain);
                 document.getElementById("perc").style.color = "orange";
                 document.getElementById("perc-text").innerHTML = "Be cautious.Consider options such as buying a less expensive home or paying down debts.";
             
             }
             else {
             
-                $("#perc").html(remain);
+                $("#perc").html('$'+remain);
                 document.getElementById("perc").style.color = "red";
                document.getElementById("perc-text").innerHTML = "Consider options such as buying a less expensive home or paying down debts.";
             
