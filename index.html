@@ -8,12 +8,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Housing-Hub</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-
     <!-- Custom CSS -->
-    <link href="css/scrolling-nav.css" rel="stylesheet">
-
+    <!--link href="css/compiled.min.css" rel="stylesheet">
+-->
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,62 +20,66 @@
     <!--Custom style-->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Template styles -->
-   <!-- <style rel="stylesheet">
-        /* TEMPLATE STYLES */
-        /* Necessary for full page carousel*/
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
 
-        html,
-        body {
-            height: 100%;
-        }
-        /* Navigation*/
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
 
-        .navbar {
-            background-color: transparent;
-        }
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <!-- Stepper CSS minified -->
+    <link rel="stylesheet" href="css/stepper.min.css">
+    <!-- Stepper Javascript minified -->
+    <script src="js/stepper.min.js"></script>
 
-        .top-nav-collapse {
-            background-color: #4285F4;
-        }
+    <!-- script -->
+    <script>
+        (function () {
+            // Stepper linear demonstration
+            var demoLinear = function (e) {
+                // Select stepper container element
+                var element = document.querySelector('ul.mdl-stepper');
+                // var steps = element.querySelectorAll('li.mdl-step');
+                console.log('element '+ element);
+                if (!element) return;
 
-        footer.page-footer {
-            background-color: #4285F4;
-        }
+                // Get the MaterialStepper instance of element to control it
+                var stepper = element.MaterialStepper;
+                console.log('stepper '+ stepper);
+                var steps = element.querySelectorAll('li.mdl-step');
+                var step;
 
-        @media only screen and (max-width: 768px) {
-            .navbar {
-                /*background-color: #4285F4;*/
-                background-color: transparent;
-            }
-            .brand {
-                display: block;
-                float: right;
-                width: 23%;
-                height: 46px;
-                margin: 0;
-                margin-top: -46px;
-            }
+                // Just looping and adding listener to event onstepnext to the all steps
+                for (var i = 0; i < steps.length; i++) {
+                    step = steps[i];
+                    // When user clicks on [data-stepper-next] button of step
+                    step.addEventListener('onstepnext', function (e) {
+                        // {element}.MaterialStepper.next() change the state of current step to "completed"
+                        // and move one step forward
+                        stepper.next();
+                    });
+                }
+                // When all steps are completed this event is dispatched
+                element.addEventListener('onsteppercomplete', function (e) {
+                    var toast = document.querySelector('#snackbar-stepper-complete');
 
-            #footer-desktop {
-                display:none;
-            }
+                    if (!toast) return;
 
-            #footer-desktop-hr {
-                display:none;
-            }
-        }
-        @media only screen and (min-width: 771px) {
-            .brand {
-                /*background-color: #4285F4;*/
-                display:none;
-            }
-            .navbar {
-                /*background-color: #4285F4;*/
-                background-color: transparent !important;
-            }
-        }
-    </style>-->
+                    toast.MaterialSnackbar.showSnackbar({
+                        message: 'Stepper linear are completed',
+                        timeout: 4000,
+                        actionText: 'Ok'
+                    });
+                });
+            };
+
+            window.addEventListener('load', demoLinear);
+        })();
+    </script>
+
+
 </head>
 
 <body>
@@ -88,7 +89,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-dark navbar-fixed-top" style="box-shadow: none;">
         <!--Collapse button-->
-        <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="fa fa-bars fa-3x white-text"></i></a>
+        <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="fa fa-bars fa-2x white-text"></i></a>
 
         <!--Content for large and medium screens-->
         <div class="navbar-desktop">
@@ -236,6 +237,68 @@
                 </p>
             </div>
         </div>
+        <section class="mdl-stepper-demo">
+
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--12-col">
+                    <!-- markup -->
+                    <ul class="mdl-stepper mdl-stepper--linear" id="demo-stepper-linear">
+                        <li class="mdl-step">
+            <span class="mdl-step__label">
+              <span class="mdl-step__title">
+                <span class="mdl-step__title-text">Title of step 1</span>
+                <span class="mdl-step__title-message">Summarize if needed</span>
+              </span>
+            </span>
+                            <div class="mdl-step__content"></div>
+                            <div class="mdl-step__actions">
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
+                                    Continue
+                                </button>
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-cancel>
+                                    Cancel
+                                </button>
+                            </div>
+                        </li>
+                        <li class="mdl-step">
+            <span class="mdl-step__label">
+          <span class="mdl-step__title">
+            <span class="mdl-step__title-text">Title of step 2</span>
+            </span>
+            </span>
+                            <div class="mdl-step__content"></div>
+                            <div class="mdl-step__actions">
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
+                                    Continue
+                                </button>
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-cancel>
+                                    Cancel
+                                </button>
+                            </div>
+                        </li>
+                        <li class="mdl-step">
+            <span class="mdl-step__label">
+          <span class="mdl-step__title">
+            <span class="mdl-step__title-text">Title of step 3</span>
+            </span>
+            </span>
+                            <div class="mdl-step__content"></div>
+                            <div class="mdl-step__actions">
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
+                                    Continue
+                                </button>
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-cancel>
+                                    Cancel
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+
     </div>
 </main>
 <!--Footer-->
@@ -262,8 +325,6 @@
 <!-- SCRIPTS -->
 
 <!-- JQuery -->
-<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
@@ -273,6 +334,11 @@
 <!-- Scrolling Nav JavaScript -->
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/scrolling-nav.js"></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
 
 <script>
     $(".button-collapse").sideNav();
