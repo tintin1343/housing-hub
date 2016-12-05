@@ -102,10 +102,10 @@
                     <a class="nav-link" href="bos311.html">Report Incidents</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="city-hall.html">City Hall</a>
+                    <a class="nav-link" href="dep_catalog.html">Department Catalog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about-boston.html">About</a>
+                    <a class="nav-link" href="about_boston.html">About Boston</a>
                 </li>
             </ul>
             <!--Search form-->
@@ -139,10 +139,10 @@
                     <a class="nav-link" href="bos311.html">Report Incidents</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="city-hall.html">City Hall</a>
+                    <a class="nav-link" href="dep_catalog.html">Department Catalog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about-boston.html">About</a>
+                    <a class="nav-link" href="about_boston.html">About Boston</a>
                 </li>
             </ul>
         </div>
@@ -159,53 +159,65 @@
             <div class="jumbotron">
                 <h1>Welcome to Boston!</h1>
                 <p>This section provides information about Boston resources such as The Mayor's Office New Urban Mechanics, the Boston Home Center, City Hall, Homebuying classes and more.</p>
-                <a class="btn btn-primary" href="#feature-icons" role="button">Know More</a>
+                <a class="btn btn-primary page-scroll" href="#feature-icons" role="button" data-target="#feature-icons">Know More</a>
             </div>
         </div>
     </div>
-    <div class="container" id="feature-icons">
-        <h2 class="col-lg-12"></h2>
+    <div class="container tab-pane active fadeInDown" id="feature-icons">
+        <h2 class="col-lg-12">Sections</h2>
+        <hr>
+        <br>
+ 
+       
         <div class="row text-xs-center">
-            <div class="col-xs-4">
+            
+            <div class="col-xs-6">
                 <a href="monum.html" class="thumbnail">
                     <img src="../images/icons/boston/monum.svg" alt="New Urban Mechanics" class="img-fluid card-title" style="width:48px;height:48px;">
                     <h4 class="card-title">New Urban Mechanics</h4>
                 </a>
             </div>
-            <div class="col-xs-4">
+            
+            <div class="col-xs-6">
                 <a href="boston-home-center.html" class="thumbnail">
                     <img src="../images/icons/boston/bhc.svg" alt="Boston Home Center" class="img-fluid card-title" style="width:48px;height:48px;">
                     <h4 class="card-title">Boston Home Center</h4>
                 </a>
-
             </div>
-            <div class="col-xs-4">
-                <a href="homebuying-101.html" class="thumbnail">
-                    <img src="../images/icons/boston/h101.svg" alt="Homebuying 101"  class="img-fluid card-title" style="width:48px;height:48px;">
-                    <h4 class="card-title">Homebuying 101</h4>
-                </a>
-
-            </div>
+            
+            
         </div>
 
         <div class="row text-xs-center">
 
-            <div class="col-xs-4">
+            <div class="col-xs-6">
+                <a href="homebuying-101.html" class="thumbnail">
+                    <img src="../images/icons/boston/h101.svg" alt="Homebuying 101"  class="img-fluid card-title" style="width:48px;height:48px;">
+                    <h4 class="card-title">Homebuying 101</h4>
+                </a>
+            </div>
+        
+
+            <div class="col-xs-6">
                 <a href="bos311.html" class="thumbnail">
                     <img src="../images/icons/boston/bos311.svg" alt="Report Incidents" class="img-fluid card-title" style="width:48px;height:48px;">
                     <h4 class="card-title">Report Incidents</h4>
                 </a>
 
             </div>
-            <div class="col-xs-4">
-                <a href="wiki/wiki.html" class="thumbnail">
-                    <img src="../images/icons/boston/city_hall_black.svg" alt="City Hall" class="img-fluid card-title" style="width:48px;height:48px;">
-                    <h4 class="card-title">City Hall</h4>
-                </a>
-
+            
             </div>
-            <div class="col-xs-4">
-                <a href="boston/boston.html" class="thumbnail">
+            
+            <div class="row text-xs-center">
+                <div class="col-xs-6">
+                    <a href="dep_catalog.html" class="thumbnail">
+                        <img src="../images/icons/boston/city_hall_black.svg" alt="City Hall" class="img-fluid card-title" style="width:48px;height:48px;">
+                        <h4 class="card-title">Department Catalog</h4>
+                    </a>
+
+                </div>
+            <div class="col-xs-6">
+                <a href="about_boston.html" class="thumbnail">
                     <img src="../images/icons/boston/boston.svg" alt="About Boston" class="img-fluid card-title" style="width:48px;height:48px;">
                     <h4 class="card-title">About Boston</h4>
                 </a>
@@ -215,8 +227,8 @@
         <div class="row">
             <div class="jumbotron">
                 <h3>Why is Boston one of the best cities to live in?</h3>
-                <p>Each section contains articles, tools, information about a particular topic related to Boston resources</p>
-                <p>Know more about the Boston Home Center, the Homebuying 101 class and more. Click on the icons to further explore the section
+                <p>Each section contains articles, tools, information about a particular topic related to Boston resources.</p>
+                <p>Know more about the Boston Home Center, the Homebuying 101 class and more. Click on the icons to further explore the section.
                 </p>
             </div>
         </div>
@@ -253,6 +265,10 @@
 
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="../js/mdb.min.js"></script>
+
+<!-- Scrolling Nav JavaScript -->
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/scrolling-nav.js"></script>
 
 <script>
     $(".button-collapse").sideNav();
