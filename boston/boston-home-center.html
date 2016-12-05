@@ -99,13 +99,13 @@
                     <a class="nav-link" href="homebuying-101.html">Homebuying 101</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="neighborhoods.html">Report Incidents</a>
+                    <a class="nav-link" href="bos311.html">Report Incidents</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="city-hall.html">City Hall</a>
+                    <a class="nav-link" href="dep_catalog.html">Department Catalog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about-boston.html">About Boston</a>
+                    <a class="nav-link" href="about_boston.html">About Boston</a>
                 </li>
             </ul>
             <!--Search form-->
@@ -136,13 +136,13 @@
                     <a class="nav-link" href="homebuying-101.html">Homebuying 101</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="neighborhoods.html">Report Incidents</a>
+                    <a class="nav-link" href="bos311.html">Report Incidents</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="city-hall.html">City Hall</a>
+                    <a class="nav-link" href="dep_catalog.html">Department Catalog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about-boston.html">About</a>
+                    <a class="nav-link" href="about_boston.html">About Boston</a>
                 </li>
             </ul>
         </div>
@@ -162,9 +162,35 @@
                 <h1>What is BHC?</h1>
                 <p>The goal of the Boston Home Center (BHC) is to improve Boston’s neighborhoods by helping residents buy and keep their homes, and to help keep them in good condition.</p>
                 <p>They offer training, financial help and counseling to first-time homebuyers, guidance and funding for homeowners for home improvements, and counseling to help families avoid foreclosure.</p>
-                <a class="btn btn-primary" href="https://www.boston.gov/housing/boston-home-center" role="button">Know More</a>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bhc_modal">Know More</button>
             </div>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="bhc_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Redirecting</h4>
+                    </div>
+                    <!--Body-->
+                    <div class="modal-body">
+                        You will be redirected to the Boston Home Center page.
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Stay on this website</button>
+                        <a class="btn btn-primary"    href="https://www.boston.gov/housing/boston-home-center">Go to BHC</a>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!-- /.Live preview-->
     </div>
     <div class="container">
         <div class="row">
@@ -174,10 +200,36 @@
                 <h5>Community Housing Clinic</h5>
                 <p>The Office of Housing Stability's Community Housing Clinic is a tremendous resource for residents — tenants and landlords — to talk one-on-one with a housing professional.
                 </p>
-                <a class="btn btn-primary" href="https://www.boston.gov/events" role="button">View Calendar</a>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendar_modal">View Calendar</button>
 
             </div>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="calendar_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Redirecting</h4>
+                    </div>
+                    <!--Body-->
+                    <div class="modal-body">
+                        You will be redirected to the Boston Calendar page.
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Stay on this website</button>
+                        <a class="btn btn-primary" href="https://www.boston.gov/events">Go to Calendar</a>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!-- /.Live preview-->
 
     </div>
 </main>
