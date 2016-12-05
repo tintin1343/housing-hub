@@ -168,42 +168,60 @@
                     <br>
                     <!--Calculator Code Starts-->
                     <!--Naked Form-->
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     <div class="card-block">
 
                         <!--Header-->
                         <div class="text-xs-center">
-                            <h3><i class="fa fa-calculator"></i> EMI Amount Calculator</h3>
+                            <h3><i class="fa fa-calculator"></i> Can I afford it Calculator</h3>
                             <hr class="mt-2 mb-2">
                         </div>
 
                         <!--Body-->
-                        <p class="text-xs-center">Calculate the equated monthly installment (EMI) required every month to pay off your loan.</p>
+                        <p class="text-xs-center">Step 1: Estimate your total monthly home payment.</p>
                         <br>
 
                         <!--Body-->
                         <form name=calc method=POST>
                         <div class="md-form">
                             <i class="fa fa-money prefix"></i>
-                            <input type="text" id="form3" class="form-control" name="loan">
-                            <label for="form3" id="loan-label">Loan Amount</label>
-                        </div>
-
-                        <div class="md-form">
-                            <i class="fa fa-calendar prefix"></i>
-                            <input type="text" id="form2" class="form-control" name="months">
-                            <label for="form2" id="months-label">Loan Duration (in months)</label>
-                        </div>
-
-                        <div class="md-form">
-                            <i class="fa fa-percent prefix"></i>
-                            <input type="text" id="form32" class="form-control" name="rate">
-                            <label for="form34" id="rate-label">Interest Rate</label>
+                            <input type="number" id="form11" class="form-control" name="pi">
+                            <label for="form11" id="pi-label">Principal and Interest (P&I)</label>
                         </div>
 
                         <div class="md-form">
                             <i class="fa fa-money prefix"></i>
-                            <input type="text" id="form33" class="form-control" readonly name="pay" id="pay" value="">
-                            <label for="form8" id="pay-label">Monthly Payment (Calculated)</label>
+                            <input type="number" id="form12" class="form-control" name="mortgage">
+                            <label for="form12" id="mortgage-label">Mortgage Insurance</label>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-money prefix"></i>
+                            <input type="number" id="form13" class="form-control" name="taxes">
+                            <label for="form13" id="taxes-label">Property Taxes</label>
+                        </div>
+                        <div class="md-form">
+                            <i class="fa fa-money prefix"></i>
+                            <input type="number" id="form14" class="form-control" name="insurance">
+                            <label for="form14" id="insurance-label">Homeowner's Insurance</label>
+                        </div>
+                        <div class="md-form">
+                            <i class="fa fa-money prefix"></i>
+                            <input type="number" id="form15" class="form-control" name="condo">
+                            <label for="form15" id="condo-label">HOA fees</label>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-money prefix"></i>
+                            <input type="number" id="form16" class="form-control" readonly name="pay" id="pay" value="">
+                            <label for="form16" id="pay-label">Monthly Home Payment (Calculated)</label>
                         </div>
 
                         <div class="text-xs-center">
@@ -290,22 +308,23 @@
 <script language="JavaScript">
     <!--
     function showpay() {
-        if ((document.calc.loan.value == null || document.calc.loan.value.length == 0) ||
-                (document.calc.months.value == null || document.calc.months.value.length == 0)
-                ||
-                (document.calc.rate.value == null || document.calc.rate.value.length == 0))
+        if (document.calc.pi.value == null || document.calc.mortgage.value == null ||
+                document.calc.taxes.value == null ||
+                document.calc.insurance.value == null || document.calc.condo.value == null)
         {
             $("#pay-label").addClass("active");
             document.calc.pay.value = "Incomplete data";
         }
         else
         {
-            var princ = document.calc.loan.value;
-            var term  = document.calc.months.value;
-            var intr   = document.calc.rate.value / 1200;
+            var pi = parseFloat(document.calc.pi.value);
+            var mort  = parseFloat(document.calc.mortgage.value);
+            var taxes   = parseFloat(document.calc.taxes.value);
+            var insur = parseFloat(document.calc.insurance.value);
+            var condo = parseFloat(document.calc.condo.value);
             document.calc.pay = document.calc.pay.onfocus;
             $("#pay-label").addClass("active");
-            document.calc.pay.value = princ * intr / (1 - (Math.pow(1/(1 + intr), term)));
+            document.calc.pay.value = pi + mort + taxes + insur + condo;
         }
 
 // payment = principle * monthly interest/(1 - (1/(1+MonthlyInterest)*Months))
@@ -313,10 +332,11 @@
     }
 
     function resetFields() {
-        $("#loan-label").removeClass("active");
-        $("#months-label").removeClass("active");
-        $("#rate-label").removeClass("active");
-        $("#pay-label").removeClass("active");
+        $("#pi-label").removeClass("active");
+        $("#mortgage-label").removeClass("active");
+        $("#taxes-label").removeClass("active");
+        $("#insurance-label").removeClass("active");
+        $("#condo-label").removeClass("active");
     }
 
     // -->
