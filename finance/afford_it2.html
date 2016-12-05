@@ -242,6 +242,10 @@
                             <h5> Money left to cover utilities, groceries, child care, health insurance, repairs, and everything else:</h5>
                             <h1 id="perc">N/A</h1>
                             <p id="perc-text"></p>
+                            <br>
+                            <p>Note: Median monthly living expenses in Boston based on one-child family data provided by the Economic Policy Institute.</p>
+                            <a class="btn btn-primary" href="http://www.epi.org/resources/budget/" role="button">Learn More</a>
+
                         
                         </div>
                     </form>
@@ -344,28 +348,15 @@
             
             
             
-            //hit budget api:
+            //hit budget api future support:
 
             var famil = '2P2C';
             var reqdata = 'family='+famil+'&location=Boston-Cambridge-Quincy%2C+MA-NH+HUD+Metro+FMR+Area%7CMassachusetts&action=epi_familybudget'
 
           
 
-             $.ajax({
-                url: 'http://www.epi.org/wp-admin/admin-ajax.php',
-                type: "POST",
-                crossDomain: true,
-                data:reqdata,
-                dataType: 'jsonp',
-                success:function(result){
-                    alert(JSON.stringify(result));
-                },
-                error:function(xhr,status,error){
-                    alert(status);
-                }
-            });
-
-           var median_living = 2300;
+           
+           var median_living = 618+1048+583+734+1001;
 
 
 
