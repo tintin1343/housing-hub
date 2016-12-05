@@ -9,79 +9,10 @@
     <title>Housing-Hub</title>
 
     <!-- Custom CSS -->
-    <!--link href="css/compiled.min.css" rel="stylesheet">
--->
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
-
-    <!--Custom style-->
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
-    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-    <!-- Stepper CSS minified -->
-    <link rel="stylesheet" href="css/stepper.min.css">
-    <!-- Stepper Javascript minified -->
-    <script src="js/stepper.min.js"></script>
-
-    <!-- script -->
-    <script>
-        (function () {
-            // Stepper linear demonstration
-            var demoLinear = function (e) {
-                // Select stepper container element
-                var element = document.querySelector('ul.mdl-stepper');
-                // var steps = element.querySelectorAll('li.mdl-step');
-                console.log('element '+ element);
-                if (!element) return;
-
-                // Get the MaterialStepper instance of element to control it
-                var stepper = element.MaterialStepper;
-                console.log('stepper '+ stepper);
-                var steps = element.querySelectorAll('li.mdl-step');
-                var step;
-
-                // Just looping and adding listener to event onstepnext to the all steps
-                for (var i = 0; i < steps.length; i++) {
-                    step = steps[i];
-                    // When user clicks on [data-stepper-next] button of step
-                    step.addEventListener('onstepnext', function (e) {
-                        // {element}.MaterialStepper.next() change the state of current step to "completed"
-                        // and move one step forward
-                        stepper.next();
-                    });
-                }
-                // When all steps are completed this event is dispatched
-                element.addEventListener('onsteppercomplete', function (e) {
-                    var toast = document.querySelector('#snackbar-stepper-complete');
-
-                    if (!toast) return;
-
-                    toast.MaterialSnackbar.showSnackbar({
-                        message: 'Stepper linear are completed',
-                        timeout: 4000,
-                        actionText: 'Ok'
-                    });
-                });
-            };
-
-            window.addEventListener('load', demoLinear);
-        })();
-    </script>
-
-
 </head>
-
 <body>
 <header class="col-lg-14" id="header">
     <!--http://www.ninezero.com/images/1700-960/sailboats-in-boston-0a5755ca.jpg-->
@@ -172,7 +103,8 @@
                 <p>Is this house in good condition? Is this neighborhood safe? </p>
                 <p>Get all you questions answered , seek information and make an informed decision - after all its your dream house!
                 </p>
-                <a class="btn btn-primary page-scroll" href="#feature-icons" role="button" data-target="#feature-icons">Know More</a>
+                <p>We understand home buying is a confusing process. Understand the home-buying process step by step.</p>
+                <a class="btn btn-primary page-scroll" href="#step-by-step" role="button" data-target="#step-by-step">Home Buying - Step By Step Guide</a>
             </div>
         </div>
     </div>
@@ -237,58 +169,220 @@
                 </p>
             </div>
         </div>
-        <section class="mdl-stepper-demo">
+        <section class="mdl-stepper-demo" id="step-by-step">
+
+            <h2>Home Buying - Step-By-Step</h2>
 
             <div class="mdl-grid">
                 <div class="mdl-cell mdl-cell--12-col">
                     <!-- markup -->
                     <ul class="mdl-stepper mdl-stepper--linear" id="demo-stepper-linear">
                         <li class="mdl-step">
-            <span class="mdl-step__label">
-              <span class="mdl-step__title">
-                <span class="mdl-step__title-text">Title of step 1</span>
-                <span class="mdl-step__title-message">Summarize if needed</span>
-              </span>
-            </span>
-                            <div class="mdl-step__content"></div>
+                            <span class="mdl-step__label">
+                                <span class="mdl-step__title">
+                                    <span class="mdl-step__title-text">Understand Your Credit Score</span>
+                                       <p>Get full information about your credit score. Having a good credit score is
+                                        very important when you apply for a loan.
+                                    </p>
+                                    </span>
+                                </span>
+                            </span>
+
+                            <!-- content -->
+                            <div class="mdl-step__content">
+                                <h5>Get Credit Score now!!</h5>
+                            </div>
+                            <!-- actions -->
                             <div class="mdl-step__actions">
                                 <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
                                     Continue
                                 </button>
-                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-cancel>
-                                    Cancel
+
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-back>
+                                    Back
+                                </button>
+
+                            </div>
+                        </li>
+                        <li class="mdl-step">
+                            <span class="mdl-step__label">
+                                <span class="mdl-step__title">
+                                    <span class="mdl-step__title-text">How much can I afford?</span>
+                                       Financial Planning is the most important factor in the home-buying process.
+                                    Do it diligently. Get help if you have to.
+                                    </span>
+                                </span>
+                            </span>
+
+                            <!-- content -->
+
+                            <!-- actions -->
+                            <div class="mdl-step__actions">
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
+                                    Continue
+                                </button>
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-back>
+                                    Back
+                                </button>
+
+                            </div>
+                        </li>
+                        <li class="mdl-step">
+                            <span class="mdl-step__label">
+                                <span class="mdl-step__title">
+                                    <span class="mdl-step__title-text">Find the right lender</span>
+                                       A lender who understands your needs is important. Choosing a good lender will
+                                       help you plan your overall financial health.
+                                    </span>
+                                </span>
+                            </span>
+
+                            <!-- content -->
+
+                            <!-- actions -->
+                            <div class="mdl-step__actions">
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
+                                    Continue
+                                </button>
+
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-back>
+                                    Back
                                 </button>
                             </div>
                         </li>
                         <li class="mdl-step">
-            <span class="mdl-step__label">
-          <span class="mdl-step__title">
-            <span class="mdl-step__title-text">Title of step 2</span>
-            </span>
-            </span>
-                            <div class="mdl-step__content"></div>
+                            <span class="mdl-step__label">
+                                <span class="mdl-step__title">
+                                    <span class="mdl-step__title-text">Find the good realtor</span>
+                                       Getting a real estate agent who understands your need aand helps you avoid the traps
+                                       is what you need to look for.
+
+                                    <a href="http://realestate.usnews.com/agents/massachusetts/boston/">Agents in Boston</a>
+                                    </span>
+                                </span>
+                            </span>
+
+                            <!-- content -->
+
+                            <!-- actions -->
                             <div class="mdl-step__actions">
                                 <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
                                     Continue
                                 </button>
-                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-cancel>
-                                    Cancel
+
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-back>
+                                    Back
                                 </button>
                             </div>
                         </li>
                         <li class="mdl-step">
-            <span class="mdl-step__label">
-          <span class="mdl-step__title">
-            <span class="mdl-step__title-text">Title of step 3</span>
-            </span>
-            </span>
-                            <div class="mdl-step__content"></div>
+                            <span class="mdl-step__label">
+                                <span class="mdl-step__title">
+                                    <span class="mdl-step__title-text">Start looking at homes!</span>
+                                       Plan out what you want. Understand how much space you need and why.Planning for the Future is the key here.
+
+                                    </span>
+                                </span>
+                            </span>
+
+                            <!-- content -->
+
+                            <!-- actions -->
                             <div class="mdl-step__actions">
                                 <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
                                     Continue
                                 </button>
-                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-cancel>
-                                    Cancel
+
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-back>
+                                    Back
+                                </button>
+                            </div>
+                        </li>
+                        <li class="mdl-step">
+                            <span class="mdl-step__label">
+                                <span class="mdl-step__title">
+                                    <span class="mdl-step__title-text">Make an offer</span>
+                                       Boston's housing market is competitive. Moving fast is the key. Don't wait if you have your heart set out on a house.
+                                    </span>
+                                </span>
+                            </span>
+
+                            <!-- content -->
+
+                            <!-- actions -->
+                            <div class="mdl-step__actions">
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
+                                    Continue
+                                </button>
+
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-back>
+                                    Back
+                                </button>
+                            </div>
+                        </li>
+                        <li class="mdl-step">
+                            <span class="mdl-step__label">
+                                <span class="mdl-step__title">
+                                    <span class="mdl-step__title-text">Get the appropriate mortgage</span>
+                                    Plan your mortgage carefully. It's a lifetime investment after all.
+                                    </span>
+                                </span>
+                            </span>
+
+                            <!-- content -->
+                            <!-- actions -->
+                            <div class="mdl-step__actions">
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
+                                    Continue
+                                </button>
+
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-back>
+                                    Back
+                                </button>
+                            </div>
+                        </li>
+                        <li class="mdl-step">
+                            <span class="mdl-step__label">
+                                <span class="mdl-step__title">
+                                    <span class="mdl-step__title-text">Close the purchase</span>
+                                Get the inspection done and finish ff the documentation.
+                                </span>
+                                </span>
+                            </span>
+
+                            <!-- content -->
+
+                            <!-- actions -->
+                            <div class="mdl-step__actions">
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
+                                    Continue
+                                </button>
+
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-back>
+                                    Back
+                                </button>
+                            </div>
+                        </li>
+                        <li class="mdl-step">
+                            <span class="mdl-step__label">
+                                <span class="mdl-step__title">
+                                    <span class="mdl-step__title-text">Move in</span>
+                                       You are almost done! The house is yours but there is still a number of things to take care of.
+                                    Don't worry, its important but easy.
+                                    </span>
+                                </span>
+                            </span>
+
+                            <!-- content -->
+
+                            <!-- actions -->
+                            <div class="mdl-step__actions">
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
+                                    Continue
+                                </button>
+
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-back>
+                                    Back
                                 </button>
                             </div>
                         </li>
@@ -324,6 +418,25 @@
 
 <!-- SCRIPTS -->
 
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.min.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<!-- Stepper CSS minified -->
+<link rel="stylesheet" href="css/stepper.min.css">
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="css/mdb.min.css" rel="stylesheet">
+
+<!--Custom style-->
+<link href="css/style.css" rel="stylesheet">
+<!-- Stepper Javascript minified -->
+<script src="js/stepper.min.js"></script>
+<!-- script for stepper-->
+<script  src="js/step.js"></script>
+
 <!-- JQuery -->
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -334,10 +447,6 @@
 <!-- Scrolling Nav JavaScript -->
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/scrolling-nav.js"></script>
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
 
 
 <script>
