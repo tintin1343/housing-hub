@@ -6,65 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Housing-Hub | House</title>
-
+    <title>Housing-Hub | Schools</title>
+    <!-- Custom CSS -->
+    <link href="../css/scrolling-nav.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-
-    <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Material Design Bootstrap -->
-    <link href="../css/mdb.min.css" rel="stylesheet">
-
-    <!-- Template styles -->
-    <style rel="stylesheet">
-        /* TEMPLATE STYLES */
-        /* Necessary for full page carousel*/
-
-        html,
-        body {
-            height: 100%;
-        }
-        /* Navigation*/
-
-        .navbar {
-            background-color: transparent;
-        }
-
-        .top-nav-collapse {
-            background-color: #4285F4;
-        }
-
-        footer.page-footer {
-            background-color: #4285F4;
-        }
-
-        @media only screen and (max-width: 768px) {
-            .navbar {
-                /*background-color: #4285F4;*/
-                background-color: transparent;
-            }
-            .brand {
-                display: block;
-                float: right;
-                width: 23%;
-                height: 46px;
-                margin: 0;
-                margin-top: -46px;
-            }
-        }
-        @media only screen and (min-width: 771px) {
-            .brand {
-                /*background-color: #4285F4;*/
-                display:none;
-            }
-            .navbar {
-                /*background-color: #4285F4;*/
-                background-color: transparent !important;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -86,8 +32,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../index.html">Home</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="finance.html">House Finder <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="finance.html">House Finder </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="calculators.html">Checklist</a>
@@ -95,8 +41,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Safety</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="schools.html">Schools</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Schools <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Maps</a>
@@ -120,8 +66,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../index.html">Home</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="finance.html">House Finder <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="finance.html">House Finder </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="calculators.html">Checklist</a>
@@ -129,8 +75,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Safety</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="schools.html">Schools</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Schools <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Maps</a>
@@ -151,60 +97,23 @@
     <div class="container">
         <div class="row">
             <div class="jumbotron">
-                <h1>House / Property</h1>
-                <p>Is this house in good condition? Is this neighborhood safe? House will help you make an informed decision on properties. Learn more about neighborhoods and get your house inspection checklist here.</p>
-                <a class="btn btn-primary" href="#feature-icons" role="button">Know More</a>
+                <h1>Schools</h1>
+                <p>We realise the importance of having good schools around your house. Especially, if you have kids.</p>
+                Use our school finder to look for schools around your future home.
+                <a class="btn btn-primary page-scroll" href="#feature-icons" role="button">Know More</a>
             </div>
         </div>
     </div>
     <div class="container" id="feature-icons">
-        <h2 class="col-lg-12"></h2>
-        <div class="row text-xs-center">
-            <div class="col-xs-4">
-                <a href="finance/finance.html" class="thumbnail">
-                    <img src="../images/icons/house/house_finder.svg" alt="Property Checkup" class="img-fluid card-title" style="width:48px;height:48px;">
-                    <h4 class="card-title">Property Checkup</h4>
-                </a>
-            </div>
-            <div class="col-xs-4">
-                <a href="house/house.html" class="thumbnail">
-                    <img src="../images/icons/house/inspection_checklist_black.svg" alt="Checklist" class="img-fluid card-title" style="width:48px;height:48px;">
-                    <h4 class="card-title">Checklist</h4>
-                </a>
+        <h2 class="col-xs-12">School Finder</h2>
+        <br>
+        <h4 class="col-xs-12">Enter the address of the house your are interested in the search box</h4>
+        <br>
+        <div class="row text-xs-center col-xs-12" id="maps" style="width:110%;height:300px;margin-bottom:50px;">
+            <!--<iframe frameborder="1" style="border:0; width:100%;height:250px;margin-bottom:50px;"
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJGzE9DS1l44kRoOhiASS_fHg&key=AIzaSyBVe5cZJjUb6lsXEw-nolzq5_sqGRXAcwk" allowfullscreen></iframe>
+        -->
 
-            </div>
-            <div class="col-xs-4">
-                <a href="process/process.html" class="thumbnail">
-                    <img src="../images/icons/house/safety_black.svg" alt="Safety"  class="img-fluid card-title" style="width:48px;height:48px;">
-                    <h4 class="card-title">Safety</h4>
-                </a>
-
-            </div>
-        </div>
-
-        <div class="row text-xs-center">
-
-            <div class="col-xs-4">
-                <a href="schools.html" class="thumbnail" class="img-fluid card-title">
-                    <img src="../images/icons/house/schools_black.svg" alt="Schools">
-                    <h4 class="card-title">Schools</h4>
-                </a>
-
-            </div>
-            <div class="col-xs-4">
-                <a href="wiki/wiki.html" class="thumbnail">
-                    <img src="../images/icons/house/maps_black.svg" alt="Maps" style="width:48px;height:48px;" class="img-fluid card-title">
-                    <h4 class="card-title">Maps</h4>
-                </a>
-
-            </div>
-            <div class="col-xs-4">
-                <a href="boston/boston.html" class="thumbnail">
-                    <img src="../images/icons/house/neighborhoods.svg" alt="Neighborhoods" style="width:48px;height:48px;" class="img-fluid card-title">
-                    <h4 class="card-title">Areas</h4>
-                </a>
-
-            </div>
         </div>
         <div class="row">
             <div class="jumbotron">
@@ -236,16 +145,53 @@
 </footer>
 <!--/.Footer-->
 
-<!-- SCRIPTS -->
 
-<!-- JQuery -->
+<!-- SCRIPTS -->
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 <script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
 
+<script>
+    $(function(){
+        $(".foot-mobile").load("../footer.html");
+    });
+
+</script>
+
+<script>
+    $(function(){
+        $("#maps").load("maps.html");
+    });
+
+</script>
+
+<!-- Stepper CSS minified -->
+<link rel="stylesheet" href="../css/stepper.min.css">
+<!-- Bootstrap core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="../css/mdb.min.css" rel="stylesheet">
+
+<!--Custom style-->
+<link href="../css/style.css" rel="stylesheet">
+<!-- Stepper Javascript minified -->
+<script src="../js/stepper.min.js"></script>
+<!-- script for stepper-->
+<script  src="../js/step.js"></script>
+
+<!-- JQuery -->
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="../js/mdb.min.js"></script>
+
+<!-- Scrolling Nav JavaScript -->
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/scrolling-nav.js"></script>
+
+
 
 <script>
     $(".button-collapse").sideNav();
@@ -257,7 +203,6 @@
     /*refer: http://stackoverflow.com/questions/31751392/how-to-make-transparent-navbar-when-scroll-to-top-of-document*/
     $(document).on('scroll', function (e) {
         e.preventDefault();
-
         var navStart = $('.navbar-fixed-top').offset().top;
         var scroll = $(window).scrollTop() /500;
 
@@ -270,6 +215,7 @@
         }
     });
 </script>
+
 
 </body>
 
