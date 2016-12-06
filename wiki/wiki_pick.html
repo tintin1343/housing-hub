@@ -93,7 +93,7 @@
                     <a class="nav-link" href="add-article.html">Add Article</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="browse-category.html">Browse Categories</a>
+                    <a class="nav-link disabled" href="#">Browse Categories</a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="wiki_popular.html">Popular Articles </a>
@@ -105,7 +105,7 @@
                     <a class="nav-link" href="featured.html">Featured Article </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="help">Help</a>
+                    <a class="nav-link disabled" href="#">Help</a>
                 </li>
             </ul>
             <!--Search form-->
@@ -130,7 +130,7 @@
                     <a class="nav-link" href="add-article.html">Add Article</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="browse-category.html">Browse Categories</a>
+                    <a class="nav-link disabled" href="#">Browse Categories</a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="wiki_popular.html">Popular Articles  </a>
@@ -142,7 +142,7 @@
                     <a class="nav-link" href="featured.html">Featured Article</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="help">Help</a>
+                    <a class="nav-link disabled" href="#">Help</a>
                 </li>
             </ul>
         </div>
@@ -160,11 +160,37 @@
             <div class="jumbotron">
                 <h1>Pick One for Me</h1>
                 <h4>Don't know what to read next? Let us pick an article for you based on your profile and activity.</h4>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Refresh</a>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#soon_modal">Refresh</button>
 
             </div>
         </div>
     </div>
+       <!-- Modal -->
+        <div class="modal fade" id="soon_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Coming Soon</h4>
+                    </div>
+                    <!--Body-->
+                    <div class="modal-body">
+                        We are working hard to bring you more articles tailored to you.
+                        Stay tuned for updates.
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!-- /.Live preview-->
     <div class="container">
         <div class="row">
             <br>
