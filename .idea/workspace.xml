@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54c4990d-346b-4d8d-a9ab-e06f6222a537" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/house/maps.html" afterPath="$PROJECT_DIR$/house/maps.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/house/schools.html" afterPath="$PROJECT_DIR$/house/schools.html" />
     </list>
     <ignored path="housing-hub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schools.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="schools.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/house/schools.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.7352941">
-              <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="104" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.5829904">
+              <caret line="101" column="86" selection-start-line="101" selection-start-column="86" selection-end-line="101" selection-end-column="86" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -98,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maps.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="maps.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/house/maps.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4458162">
-              <caret line="100" column="88" selection-start-line="100" selection-start-column="88" selection-end-line="100" selection-end-column="88" />
+            <state vertical-scroll-proportion="-12.5">
+              <caret line="104" column="10" selection-start-line="104" selection-start-column="10" selection-end-line="104" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -192,9 +192,9 @@
         <option value="$PROJECT_DIR$/house/areas.html" />
         <option value="$PROJECT_DIR$/house/directions.html" />
         <option value="$PROJECT_DIR$/house/school_maps.html" />
-        <option value="$PROJECT_DIR$/house/schools.html" />
         <option value="$PROJECT_DIR$/house/house.html" />
         <option value="$PROJECT_DIR$/house/maps.html" />
+        <option value="$PROJECT_DIR$/house/schools.html" />
       </list>
     </option>
   </component>
@@ -876,16 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/house/schools.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7352941">
-          <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="104" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/house/house.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.294117">
@@ -898,8 +888,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/house/maps.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4458162">
-          <caret line="100" column="88" selection-start-line="100" selection-start-column="88" selection-end-line="100" selection-end-column="88" />
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="104" column="10" selection-start-line="104" selection-start-column="10" selection-end-line="104" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/schools.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5829904">
+          <caret line="101" column="86" selection-start-line="101" selection-start-column="86" selection-end-line="101" selection-end-column="86" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
