@@ -163,7 +163,7 @@
             <div class="jumbotron">
                 <h1>About Boston</h1>
                 <p>Did you know that more than 15% of Bostonians walk to work?
-                Learn more about the city you live in with this useful infographic.</p>
+                Learn more about the city you live in with these useful infographics.</p>
 <!-- 
                 <a class="btn btn-primary" href="http://newurbanmechanics.org/boston/" role="button">Know More</a>
  -->
@@ -204,16 +204,53 @@
         <!-- /.Live preview-->
 
     </div>
- <div class="container">
+       <div class="container">
         <div class="row">
             <div class="jumbotron">
-                <img src="boston_infographic.jpg" class="img-fluid" style="width: 100%"/>
-                
+                <h3>Boston City Facts</h3>
+                <img   src="boston_infographic.jpg" class="img-fluid" style="width:100%;display:none"/>
+                <a class="btn btn-primary viewbtn"  role="button" style="color:white" >Show</a>
             </div>
         </div>
- 
-
+        </div>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron">
+                <h3>Boston Foods and Where to Find Them</h3>
+                <img  src="boston_food_infographic.jpg" class="img-fluid" style="width:100%;display:none"/>
+                <a class="btn btn-primary viewbtn"  role="button" style="color:white" >Show</a>
+            </div>
+        </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron">
+                <h3>Boston Snow Stats</h3>
+                <img  src="boston_snow_infographic.jpg" class="img-fluid" style="width:100%;display:none"/>
+                <a class="btn btn-primary viewbtn"  role="button" style="color:white" >Show</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron">
+                <h3>Boston Public Library</h3>
+                <img  src="boston_library_infographic.jpg" class="img-fluid" style="width:100%;display:none"/>
+                <a class="btn btn-primary viewbtn"  role="button" style="color:white" >Show</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron">
+                <h3>Boston Marathon</h3>
+                <img  src="boston_marathon_infographic.jpg" class="img-fluid" style="width:100%;display:none"/>
+                <a class="btn btn-primary viewbtn"  role="button" style="color:white" >Show</a>
+            </div>
+        </div>
+    </div>
+
+
 </main>
 <!--Footer-->
 <footer class="page-footer center-on-small-only">
@@ -268,6 +305,18 @@
             $('.navbar-fixed-top').css('background-color', '#4285F4');
         }
     });
+</script>
+
+<script type="text/javascript">
+$('.viewbtn').click(function() { 
+    
+    $(this).parent().find('img').toggle(300);
+    var val = $(this).text();
+    if (val == 'Show' )$(this).text("Hide")
+    else $(this).text("Show")
+    
+});
+
 </script>
 
 </body>
