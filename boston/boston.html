@@ -8,63 +8,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Housing-Hub | Boston</title>
 
+    <!-- Custom CSS -->
+    <link href="../css/scrolling-nav.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-
-    <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Material Design Bootstrap -->
-    <link href="../css/mdb.min.css" rel="stylesheet">
-
-    <!-- Template styles -->
-    <style rel="stylesheet">
-        /* TEMPLATE STYLES */
-        /* Necessary for full page carousel*/
-
-        html,
-        body {
-            height: 100%;
-        }
-        /* Navigation*/
-
-        .navbar {
-            background-color: transparent;
-        }
-
-        .top-nav-collapse {
-            background-color: #4285F4;
-        }
-
-        footer.page-footer {
-            background-color: #4285F4;
-        }
-
-        @media only screen and (max-width: 768px) {
-            .navbar {
-                /*background-color: #4285F4;*/
-                background-color: transparent;
-            }
-            .brand {
-                display: block;
-                float: right;
-                width: 23%;
-                height: 46px;
-                margin: 0;
-                margin-top: -46px;
-            }
-        }
-        @media only screen and (min-width: 771px) {
-            .brand {
-                /*background-color: #4285F4;*/
-                display:none;
-            }
-            .navbar {
-                /*background-color: #4285F4;*/
-                background-color: transparent !important;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -255,11 +202,43 @@
 <!--/.Footer-->
 
 
-<!-- SCRIPTS -->
 
-<!-- JQuery -->
+
+<!-- SCRIPTS -->
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 <script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
 
+<script>
+    $(function(){
+        $(".foot-mobile").load("../footer.html");
+    });
+
+</script>
+
+<!--<script>
+    $(function(){
+        $("#maps").load("school_maps.html");
+    });
+
+</script>-->
+
+<!-- Stepper CSS minified -->
+<link rel="stylesheet" href="../css/stepper.min.css">
+<!-- Bootstrap core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="../css/mdb.min.css" rel="stylesheet">
+
+<!--Custom style-->
+<link href="../css/style.css" rel="stylesheet">
+<!-- Stepper Javascript minified -->
+<script src="../js/stepper.min.js"></script>
+<!-- script for stepper-->
+<script  src="../js/step.js"></script>
+
+<!-- JQuery -->
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
@@ -269,6 +248,8 @@
 <!-- Scrolling Nav JavaScript -->
 <script src="../js/jquery.easing.min.js"></script>
 <script src="../js/scrolling-nav.js"></script>
+
+
 
 <script>
     $(".button-collapse").sideNav();
@@ -280,10 +261,9 @@
     /*refer: http://stackoverflow.com/questions/31751392/how-to-make-transparent-navbar-when-scroll-to-top-of-document*/
     $(document).on('scroll', function (e) {
         e.preventDefault();
-
         var navStart = $('.navbar-fixed-top').offset().top;
         var scroll = $(window).scrollTop() /500;
-       
+
         if (scroll===0 && navStart===0) {
             $('.navbar-fixed-top').css('opacity', 1);
             $('.navbar-fixed-top').css('background-color', 'transparent');
