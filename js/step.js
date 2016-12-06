@@ -36,17 +36,9 @@
 
         // When all steps are completed this event is dispatched
         element.addEventListener('onsteppercomplete', function (e) {
-/*            var toast = document.querySelector('#snackbar-stepper-complete');
-
-            if (!toast) return;
-
-            toast.MaterialSnackbar.showSnackbar({
-                message: 'Stepper linear are completed',
-                timeout: 4000,
-                actionText: 'Ok'
-            });*/
-            alert("Move to sections");
-            window.location.href = '#feature-icons';
+            $("#after-complete").css("display","block");
+           // alert("Move to sections");
+           // window.location.href = '#feature-icons';
         });
     };
 
