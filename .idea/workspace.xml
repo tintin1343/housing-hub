@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="54c4990d-346b-4d8d-a9ab-e06f6222a537" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/house/maps.html" afterPath="$PROJECT_DIR$/house/maps.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/house/schools.html" afterPath="$PROJECT_DIR$/house/schools.html" />
     </list>
     <ignored path="housing-hub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,8 +99,8 @@
       <file leaf-file-name="maps.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/house/maps.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1970803">
-              <caret line="182" column="107" selection-start-line="182" selection-start-column="107" selection-end-line="182" selection-end-column="107" />
+            <state vertical-scroll-proportion="0.7810219">
+              <caret line="198" column="35" selection-start-line="198" selection-start-column="12" selection-end-line="198" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -844,8 +843,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/house/maps.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1970803">
-          <caret line="182" column="107" selection-start-line="182" selection-start-column="107" selection-end-line="182" selection-end-column="107" />
+        <state vertical-scroll-proportion="0.7810219">
+          <caret line="198" column="35" selection-start-line="198" selection-start-column="12" selection-end-line="198" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
