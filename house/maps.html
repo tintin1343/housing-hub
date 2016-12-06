@@ -1,344 +1,219 @@
-<!--<!DOCTYPE html>
-<html>
-<head>
-    <title>Geolocation</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <style>
-        /* Always set the map height explicitly to define the size of the div
-         * element that contains the map. */
-        #map {
-            height: 100%;
-        }
-        /* Optional: Makes the sample page fill the window. */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
-</head>
-<body>
-<div id="map"></div>
-<script>
-    // Note: This example requires that you consent to location sharing when
-    // prompted by your browser. If you see the error "The Geolocation service
-    // failed.", it means you probably did not give permission for the browser to
-    // locate you.
-
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: -34.397, lng: 150.644},
-            zoom: 13
-        });
-        var infoWindow = new google.maps.InfoWindow({map: map});
-
-        var pos;
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                pos = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude
-                };
-
-                var service = new google.maps.places.PlacesService(map);
-
-                console.log('pos '+ pos);
-
-                service.nearbySearch({
-                    location: pos,
-                    radius: 500,
-                    type: ['schools']
-                }, callback);
-
-                infoWindow.setPosition(pos);
-                infoWindow.setContent('You are here.');
-                map.setCenter(pos);
-            }, function() {
-                handleLocationError(true, infoWindow, map.getCenter());
-            });
-        } else {
-            // Browser doesn't support Geolocation
-            handleLocationError(false, infoWindow, map.getCenter());
-        }
-
-    }
-
-    function callback(results, status) {
-        var bounds = new google.maps.LatLngBounds();
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            console.log(results.length);
-            for (var i = 0; i < results.length; i++) {
-                createMarker(results[i]);
-                bounds.extend(results[i].geometry.location);
-            }
-        }
-       // map.fitBounds(bounds);
-    }
-
-    function createMarker(place) {
-        var placeLoc = place.geometry.location;
-        console.log('placeLoc '+ placeLoc);
-
-        var image = {
-            url: place.icon,
-            size: new google.maps.Size(71, 71),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(17, 34),
-            scaledSize: new google.maps.Size(25, 25)
-        };
-
-        var marker = new google.maps.Marker({
-            setMap: map,
-            icon: image,
-            title: place.name,
-            position: placeLoc
-        });
-        //marker.setMap(map);
-
-        google.maps.event.addListener(marker, 'click', function() {
-            infowindow.setContent(place.name);
-            infowindow.open(map, this);
-        });
-    }
-
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                'Error: The Geolocation service failed.' :
-                'Error: Your browser doesn\'t support geolocation.');
-    }
-</script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCep_NlI9rI4hF9niMFKeseIJHrGW7JEcU&libraries=places&callback=initMap">
-</script>
-</body>
-</html>-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <!-- Required meta tags always come first -->
     <meta charset="utf-8">
-    <title>Places Searchbox</title>
-    <style>
-        /* Always set the map height explicitly to define the size of the div
-         * element that contains the map. */
-        #map {
-            height: 100%;
-        }
-        /* Optional: Makes the sample page fill the window. */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        .controls {
-            margin-top: 10px;
-            border: 1px solid transparent;
-            border-radius: 2px 0 0 2px;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            height: 32px;
-            outline: none;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        #pac-input {
-            background-color: #fff;
-            font-family: Roboto;
-            font-size: 15px;
-            font-weight: 300;
-            margin-left: 12px;
-            padding: 0 11px 0 13px;
-            text-overflow: ellipsis;
-            width: 300px;
-        }
-
-        #pac-input:focus {
-            border-color: #4d90fe;
-        }
-
-        .pac-container {
-            font-family: Roboto;
-        }
-
-        #type-selector {
-            color: #fff;
-            background-color: #4d90fe;
-            padding: 5px 11px 0px 11px;
-        }
-
-        #type-selector label {
-            font-family: Roboto;
-            font-size: 13px;
-            font-weight: 300;
-        }
-        #target {
-            width: 345px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Housing-Hub | Maps</title>
+    <!-- Custom CSS -->
+    <link href="../css/scrolling-nav.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
 </head>
+
 <body>
-<input id="pac-input" class="controls" type="text" placeholder="Search Box" style="width:80%; margin-left:0">
-<div id="map"></div>
+<header class="col-lg-14" id="header">
+    <img width="1621" height="300" src="../images/house_banner.jpg" class="img-fluid" alt="house-banner" style="height:226px !important;">
+    <!--Navbar-->
+    <nav class="navbar navbar-dark navbar-fixed-top" style="box-shadow: none;">
+        <!--Collapse button-->
+        <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="fa fa-bars fa-3x white-text"></i></a>
+
+        <!--Content for large and medium screens-->
+        <div class="navbar-desktop">
+            <!--Navbar Brand-->
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/hub_logo.png" class="img-fluid" style="width: 70%;"/>
+            </a>
+            <!--Links-->
+            <ul class="nav navbar-nav pull-xs-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="finance.html">House Finder </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calculators.html">Checklist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Safety</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="schools.html">Schools </a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link" href="maps.html">Maps <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Report Incidents</a>
+                </li>
+            </ul>
+            <!--Search form-->
+            <form class="form-inline">
+                <input class="form-control" type="text" placeholder="Search">
+            </form>
+        </div>
+
+        <!-- Content for mobile devices-->
+        <div class="navbar-mobile">
+            <!--Navbar Brand-->
+            <a class="brand" href="../index.html"><img src="../images/hub_logo.png" class="img-fluid"/></a>
+
+            <ul class="side-nav" id="mobile-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="finance.html">House Finder </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calculators.html">Checklist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Safety</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="schools.html">Schools </a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link" href="maps.html">Maps <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Report Incidents</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar-->
+</header>
+<main>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item active"><a href="house.html">House</a></li>
+    </ol>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron">
+                <h1>View Property on Map</h1>
+                <p>You can use this interface to look at a property in map view / street view.</p>
+                <a class="btn btn-primary page-scroll" href="#feature-icons" role="button">Know More</a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="feature-icons">
+        <h2>Look at property</h2>
+        <p class="col-xs-12">Enter the address of the property below</p>
+        <br>
+        <div class="row text-xs-center col-xs-12" id="maps" style="width:110%;height:300px;margin-bottom:100px;">
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="card card-block">
+                <h3 class="card-title">Use Street View</h3>
+                <p>To use street view drag the orange man on the right bottom (above the '+' and '-' symbols on the map</p>
+            </div>
+        </div>
+    </div>
+</main>
+<!--Footer-->
+<footer class="page-footer center-on-small-only">
+    <div class="foot-mobile">
+
+    </div>
+    <!--Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            <div class="row text-xs-center">
+                <span>Copyright © 2016 <a href="index.html" class="page-scroll"> Housing Hub </a></span>
+                <span class="pull-right" style="padding-right:10px;"><a href="#header" class="page-scroll"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a></span>
+
+            </div>
+        </div>
+    </div>
+
+    <!--/.Copyright-->
+</footer>
+<!--/.Footer-->
+
+
+<!-- SCRIPTS -->
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
+
 <script>
-    // This example adds a search box to a map, using the Google Place Autocomplete
-    // feature. People can enter geographical searches. The search box will return a
-    // pick list containing a mix of places and predicted search terms.
-
-    // This example requires the Places library. Include the libraries=places
-    // parameter when you first load the API. For example:
-    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-    function initAutocomplete() {
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: -33.8688, lng: 151.2195},
-            zoom: 13,
-            /*mapTypeId: 'roadmap',*/
-            mapTypeControl: true,
-            mapTypeControlOptions: {
-                mapTypeIds: []
-            }
-        });
-        var infoWindow = new google.maps.InfoWindow({map: map});
-        var pos;
-
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                pos = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude
-                };
-
-                console.log('pos '+ pos);
-
-                infoWindow.setPosition(pos);
-                infoWindow.setContent('You are here.');
-                map.setCenter(pos);
-            }, function() {
-                handleLocationError(true, infoWindow, map.getCenter());
-            });
-        } else {
-            // Browser doesn't support Geolocation
-            handleLocationError(false, infoWindow, map.getCenter());
-        }
-
-        // Create the search box and link it to the UI element.
-        var input = document.getElementById('pac-input');
-        var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-        // Bias the SearchBox results towards current map's viewport.
-        map.addListener('bounds_changed', function() {
-            searchBox.setBounds(map.getBounds());
-        });
-
-        var markers = [];
-        // Listen for the event fired when the user selects a prediction and retrieve
-        // more details for that place.
-        searchBox.addListener('places_changed', function() {
-            var places = searchBox.getPlaces();
-
-
-            if (places.length == 0) {
-                return;
-            }
-
-            // Clear out the old markers.
-            markers.forEach(function(marker) {
-                marker.setMap(null);
-            });
-            markers = [];
-
-            var service = new google.maps.places.PlacesService(map);
-            // For each place, get the icon, name and location.
-            var bounds = new google.maps.LatLngBounds();
-            var searchResults;
-
-            if (places.length == 1) {
-                console.log("inside one");
-
-                var request = {
-                    location: places[0].geometry.location,
-                    radius: 500,
-                    type: ['school']
-
-                }
-
-                service.nearbySearch(request,
-                        function callback(results, status) {
-                            //console.log('results', results);
-                            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                               // console.log(results.length);
-                                //return results;
-                                for (var i = 0; i < results.length; i++) {
-                                    //createMarker(results[i]);
-                                    var place = results[i];
-
-                                    if (!place.geometry) {
-                                        console.log("Returned place contains no geometry");
-                                        return;
-                                    }
-                                    var placeLoc = place.geometry.location;
-
-                                    var icon = {
-                                        url: place.icon,
-                                        size: new google.maps.Size(71, 71),
-                                        origin: new google.maps.Point(0, 0),
-                                        anchor: new google.maps.Point(17, 34),
-                                        scaledSize: new google.maps.Size(25, 25)
-                                    };
-
-                                    // Create a marker for each place.
-                                    var marker = new google.maps.Marker({
-                                        map: map,
-                                        icon: icon,
-                                        title: place.name,
-                                        position: place.geometry.location
-                                    });
-                                    //console.log('marker ', marker);
-
-                                    markers.push(marker);
-
-                                    google.maps.event.addListener(marker, 'click', function () {
-                                        //var infoWindow = new google.maps.InfoWindow({map: map});
-                                        //console.log(this.title);
-                                        infoWindow.setContent(this.title);
-                                        //infoWindow.setPosition(this.location);
-                                        infoWindow.open(map, this);
-                                    });
-
-                                    if (place.geometry.viewport) {
-                                        // Only geocodes have viewport.
-                                        bounds.union(place.geometry.viewport);
-                                    } else {
-                                        bounds.extend(place.geometry.location);
-                                    }
-                                }
-
-
-                                map.fitBounds(bounds);
-                            }
-                        });
-
-            }
-            });
-        }
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                'Error: The Geolocation service failed.' :
-                'Error: Your browser doesn\'t support geolocation.');
-    }
+    $(function(){
+        $(".foot-mobile").load("../footer.html");
+    });
 
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCep_NlI9rI4hF9niMFKeseIJHrGW7JEcU&libraries=places&callback=initAutocomplete"
-        async defer></script>
+
+<script>
+    $(function(){
+        $("#maps").load("directions.html");
+    });
+
+</script>
+
+<!-- Stepper CSS minified -->
+<link rel="stylesheet" href="../css/stepper.min.css">
+<!-- Bootstrap core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="../css/mdb.min.css" rel="stylesheet">
+
+<!--Custom style-->
+<link href="../css/style.css" rel="stylesheet">
+<!-- Stepper Javascript minified -->
+<script src="../js/stepper.min.js"></script>
+<!-- script for stepper-->
+<script  src="../js/step.js"></script>
+
+<!-- JQuery -->
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="../js/mdb.min.js"></script>
+
+<!-- Scrolling Nav JavaScript -->
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/scrolling-nav.js"></script>
+
+
+
+<script>
+    $(".button-collapse").sideNav();
+</script>
+
+<script type="text/javascript">
+    Waves.attach('.navbar li', ['waves-light']);
+    Waves.init();
+    /*refer: http://stackoverflow.com/questions/31751392/how-to-make-transparent-navbar-when-scroll-to-top-of-document*/
+    $(document).on('scroll', function (e) {
+        e.preventDefault();
+        var navStart = $('.navbar-fixed-top').offset().top;
+        var scroll = $(window).scrollTop() /500;
+
+        if (scroll===0 && navStart===0) {
+            $('.navbar-fixed-top').css('opacity', 1);
+            $('.navbar-fixed-top').css('background-color', 'transparent');
+        } else {
+            $('.navbar-fixed-top').css('opacity', 1);
+            $('.navbar-fixed-top').css('background-color', '#4285F4');
+        }
+    });
+</script>
+
+
 </body>
+
 </html>
-<!--
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCep_NlI9rI4hF9niMFKeseIJHrGW7JEcU&libraries=places&callback=initMap" async defer></script>
--->
