@@ -226,8 +226,6 @@
             handleLocationError(false, infoWindow, map.getCenter());
         }
 
-
-
         // Create the search box and link it to the UI element.
         var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.SearchBox(input);
@@ -272,9 +270,9 @@
 
                 service.nearbySearch(request,
                         function callback(results, status) {
-                            console.log('results', results);
+                            //console.log('results', results);
                             if (status === google.maps.places.PlacesServiceStatus.OK) {
-                                console.log(results.length);
+                               // console.log(results.length);
                                 //return results;
                                 for (var i = 0; i < results.length; i++) {
                                     //createMarker(results[i]);
@@ -295,17 +293,22 @@
                                     };
 
                                     // Create a marker for each place.
-                                    markers.push(new google.maps.Marker({
+                                    var marker = new google.maps.Marker({
                                         map: map,
                                         icon: icon,
                                         title: place.name,
                                         position: place.geometry.location
-                                    }));
+                                    });
+                                    //console.log('marker ', marker);
 
-                                    google.maps.event.addListener(markers, 'click', function () {
-                                        //console.log('marker ', markers);
-                                        infowindow.setContent(place.name);
-                                        infowindow.open(map, this);
+                                    markers.push(marker);
+
+                                    google.maps.event.addListener(marker, 'click', function () {
+                                        //var infoWindow = new google.maps.InfoWindow({map: map});
+                                        //console.log(this.title);
+                                        infoWindow.setContent(this.title);
+                                        //infoWindow.setPosition(this.location);
+                                        infoWindow.open(map, this);
                                     });
 
                                     if (place.geometry.viewport) {
@@ -324,6 +327,12 @@
             }
             });
         }
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                'Error: The Geolocation service failed.' :
+                'Error: Your browser doesn\'t support geolocation.');
+    }
 
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCep_NlI9rI4hF9niMFKeseIJHrGW7JEcU&libraries=places&callback=initAutocomplete"
