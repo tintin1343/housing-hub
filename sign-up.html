@@ -249,7 +249,9 @@
         }
 
         if (username !== "" && email!== "" && pwd !== "") {
-
+            localStorage.setItem("username", username);
+            localStorage.setItem("email", email);
+            localStorage.setItem("password",pwd);
             location.href = "index.html";
 
         }

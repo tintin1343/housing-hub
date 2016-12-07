@@ -95,7 +95,7 @@
                     <a class="nav-link" href="login.html">Login</a>
                 </li>
                 <li class="nav-item" id="log-out-li" style="display:none;">
-                    <a class="nav-link" href="login.html">Logout</a>
+                    <a class="nav-link" href="#" onclick="logout()">Logout</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
@@ -116,6 +116,9 @@
 </header>
 <main>
     <div class="container">
+        <div class="row" id="userNameLabel" style="display:none;">
+            <h5 id="userName" style="float:right;padding-right:10px;padding-top:5px;"></h5>
+        </div>
         <div class="row">
             <div class="jumbotron">
                 <h1>Welcome to the Housing Hub!</h1>
@@ -226,17 +229,8 @@
 
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<!--<script src="js/material.min.js"></script>-->
-<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-<!-- Stepper CSS minified -->
-<!--<link rel="stylesheet" href="css/material.min.css">
-<link rel="stylesheet" href="css/stepper.min.css">-->
-<!--
-&lt;!&ndash; Stepper Javascript minified &ndash;&gt;
-<script src="js/stepper.min.js"></script>
-&lt;!&ndash; script for stepper&ndash;&gt;
-<script  src="js/step.js"></script>-->
 
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 <!-- JQuery -->
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -256,7 +250,21 @@
     $(function(){
         $(".foot-mobile").load("footer.html");
 
+        if(localStorage.getItem("username") !== null) {
+            $("#userName").text('Hi, '+ localStorage.getItem("username"));
+            $("#userNameLabel").css("display","block");
+            $("#log-out-li").css("display","block");
+            $("#login-li").css("display","none");
+        }
+
     });
+
+    function logout(){
+        localStorage.clear();
+        $("#userNameLabel").css("display","none");
+        $("#userName").text('');
+        location.href="index.html";
+    }
 </script>
 
 <script type="text/javascript">

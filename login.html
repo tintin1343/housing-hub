@@ -61,6 +61,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="login.html">Login</a>
                 </li>
+
             </ul>
             <!--Search form-->
             <form class="form-inline">
@@ -91,7 +92,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item active" id="login-li" style="display:none;">
+                <li class="nav-item active" id="login-li">
                     <a class="nav-link" href="login.html">Login<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item" id="log-out-li" style="display:none;">
@@ -265,9 +266,10 @@
         }
 
         if (username !== "" && pwd !== "") {
+            localStorage.setItem("username", username);
+            localStorage.setItem("password",pwd);
 
-                location.href = window.history.back();
-
+            location.href = window.history.back();
         }
     }
 </script>
