@@ -28,6 +28,23 @@ footer.page-footer {
     height:auto;
 }
 
+.user {
+    display: inline-block;
+
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.flpbtn {
+    color: white !important;
+}
+.card-wrapper {
+
+    height: 300px;
+
+}
 
 @media only screen
 and (max-width: 768px)
