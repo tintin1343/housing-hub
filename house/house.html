@@ -93,10 +93,10 @@
                     <a class="nav-link" href="property-checkup.html">Property Checkup</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="calculators.html">Checklist</a>
+                    <a class="nav-link" href="#">Checklist</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="property-checkup.html">Safety</a>
+                    <a class="nav-link disabled" href="#">Safety</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="schools.html">Schools</a>
@@ -130,10 +130,10 @@
                     <a class="nav-link" href="property-checkup.html">Property Checkup</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="calculators.html">Checklist</a>
+                    <a class="nav-link" href="#">Checklist</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="property-checkup.html">Safety</a>
+                    <a class="nav-link disabled" href="#">Safety</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="schools.html">Schools</a>
@@ -185,7 +185,7 @@
         <div class="row text-xs-center">
 
             <div class="col-xs-6">
-                <a href="property-checkup.html" class="thumbnail">
+                <a href="#" data-toggle="modal" data-target="#soon_modal" class="thumbnail">
                     <img src="../images/icons/house/safety_black.svg" alt="Safety"  class="img-fluid card-title" style="width:48px;height:48px;">
                     <h4 class="card-title">Safety</h4>
                 </a>
@@ -216,6 +216,35 @@
                 </a>
 
             </div>
+            
+                  
+             <!-- Modal -->
+        <div class="modal fade" id="soon_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Coming Soon</h4>
+                    </div>
+                    <!--Body-->
+                    <div class="modal-body">
+                        We are working hard to bring you an interactive map of Boston areas with safety scores.
+                        Stay tuned for updates.
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!-- /.Live preview-->
+            
         </div>
         <div class="row">
             <div class="jumbotron">
