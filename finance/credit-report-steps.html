@@ -98,6 +98,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="creditreport.html">About Credit Reports</a>
                 </li>
+                <li class="nav-item" id="login-li">
+                    <a class="nav-link" href="../login.html">Login</a>
+                </li>
+                <li class="nav-item" id="log-out-li" style="display:none;">
+                    <a class="nav-link" href="#" onclick="logout()">Logout</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -110,6 +116,9 @@
         <li class="breadcrumb-item"><a href="creditreport.html">Credit Reports</a></li>
     </ol>
     <div class="container" id="feature-icons">
+        <div class="row" id="userNameLabel" style="display:none;">
+            <h5 id="userName" style="float:right;padding-right:10px;padding-top:5px;"></h5>
+        </div>
         <div class="row">
             <br>
             <h2 class="doc-title doc-first col-lg-12">About Credit Reports</h2>
@@ -262,13 +271,45 @@
 <script>
     $(function(){
         $(".foot-mobile").load("../footer.html");
+
+        if(localStorage.getItem("username") !== null) {
+            $("#userName").text('Hi, '+ localStorage.getItem("username"));
+            $("#userNameLabel").css("display","block");
+            $("#log-out-li").css("display","block");
+            $("#login-li").css("display","none");
+        }
+
+        $("a").on("click", function(){
+            console.log(location.href + " "+ this.href);
+            localStorage.setItem("nextpage",this.href);
+            localStorage.setItem("previouspage",location.href);
+        });
     });
 
+    function checkRedirect(){
+        console.log('In Check Reddirect');
+
+        if(!localStorage.getItem("username")) {
+            // console.log(location.href + " "+ this.href);
+            location.href="../login.html";
+        }
+        else{
+            console.log(location.href + " "+ this.href);
+            location.href="add-article.html";
+        }
+    }
+    function logout(){
+        localStorage.clear();
+        $("#userNameLabel").css("display","none");
+        $("#userName").text('');
+        location.href="../index.html";
+    }
 </script>
 
 <script>
     $(".button-collapse").sideNav();
 </script>
+
 
 <script type="text/javascript">
     Waves.attach('.navbar li', ['waves-light']);
