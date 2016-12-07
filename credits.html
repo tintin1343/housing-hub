@@ -260,17 +260,26 @@
 
 <!-- SCRIPTS -->
 
-<!-- JQuery -->
-<script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="../js/mdb.min.js"></script>
+<script type="text/javascript" src="js/mdb.min.js"></script>
+
+<!-- Scrolling Nav JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
 
 <script>
     $(".button-collapse").sideNav();
+</script>
+
+<script>
+    $(function(){
+        $(".foot-mobile").load("footer.html");
+    });
 </script>
 
 <script type="text/javascript">
@@ -279,11 +288,6 @@
     /*refer: http://stackoverflow.com/questions/31751392/how-to-make-transparent-navbar-when-scroll-to-top-of-document*/
     $(document).on('scroll', function (e) {
         e.preventDefault();
-        /*  var o = $(document).scrollTop() / 500;
-         if (o > 1.000) { o = 1;} else {o = 100;}
-         var e = $('navbar-fixed-top');
-         $('.navbar-fixed-top').css('opacity', o);
-         $('.navbar-fixed-top').css('background-color', '#4285F4');*/
         var navStart = $('.navbar-fixed-top').offset().top;
         var scroll = $(window).scrollTop() /500;
 
