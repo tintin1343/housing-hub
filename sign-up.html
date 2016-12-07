@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Housing-Hub | Login</title>
+    <title>Housing-Hub | Sign Up Form</title>
 
     <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
@@ -119,72 +119,51 @@
         <div class="row">
             <!--<div class="jumbotron">-->
 
-                <!--Form without header-->
-                <div class="card col-lg-12">
-                    <div class="card-block">
-                        <form>
-                        <!--Header-->
-                        <div class="text-xs-center">
-                            <h3><i class="fa fa-lock"></i> Login:</h3>
-                            <hr class="mt-2 mb-2">
-                        </div>
+            <!--Form without header-->
 
-                        <!--Body-->
-                        <div class="md-form">
-                            <i class="fa fa-envelope prefix"></i>
-                            <input type="text" id="form2" class="form-control">
-                            <label for="form2">Enter Username</label>
-                        </div>
+            <!--Form with header-->
+            <div class="card">
+                <form class="card-block">
 
-                        <div class="md-form">
-                            <i class="fa fa-lock prefix"></i>
-                            <input type="password" id="form4" class="form-control">
-                            <label for="form4">Enter Password</label>
-                        </div>
+                    <!--Header-->
 
-                        <div class="text-xs-center">
-                            <button type="button" class="btn btn-primary" onclick="onLogin();">Login</button>
-                        </div>
-                        </form>
+                    <div class="text-xs-center">
+                        <h3><i class="fa fa-lock"></i> Sign Up:</h3>
+                        <hr class="mt-2 mb-2">
+                    </div>
+                   <!-- <div class="form-header blue-gradient">
+                        <h3><i class="fa fa-user"></i> Register:</h3>
+                    </div>-->
+
+                    <!--Body-->
+                    <div class="md-form">
+                        <i class="fa fa-user prefix"></i>
+                        <input type="text" id="form3" class="form-control">
+                        <label for="form3">Your name</label>
+                    </div>
+                    <div class="md-form">
+                        <i class="fa fa-envelope prefix"></i>
+                        <input type="text" id="form2" class="form-control">
+                        <label for="form2">Your email</label>
                     </div>
 
-                    <!--Footer-->
-                    <div class="modal-footer">
-                        <div class="options">
-                            <p>Not a member? <a href="sign-up.html">Sign Up</a></p>
-                            <p>Forgot <a href="#" data-toggle="modal" data-target="#soon_modal">Password?</a></p>
-                        </div>
+                    <div class="md-form">
+                        <i class="fa fa-lock prefix"></i>
+                        <input type="password" id="form4" class="form-control">
+                        <label for="form4">Your password</label>
                     </div>
 
-                </div>
-                <!--/Form without header-->
-
-           <!-- </div>-->
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="soon_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <!--Content-->
-            <div class="modal-content">
-                <!--Header-->
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">Coming Soon</h4>
-                </div>
-                <!--Body-->
-                <div class="modal-body">
-                    We are working hard to get this functionality live and working. We appreciate your patience
-                </div>
-                <!--Footer-->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    <div class="text-xs-center">
+                        <button type="button" class="btn btn-primary" onclick="onLogin();">Sign up</button>
+                    </div>
+                    </form>
                 </div>
             </div>
-            <!--/.Content-->
+            <!--/Form with header-->
+
+            <!--/Form without header-->
+
+            <!-- </div>-->
         </div>
     </div>
 
@@ -248,10 +227,11 @@
 
 <script>
     var history = window.history;
-   // console.log(window.history +" "+  window.history.state);
+    // console.log(window.history +" "+  window.history.state);
     function onLogin(){
         //console.log(window.history.back());
-        var username = $("#form2").val();
+        var username = $("#form3").val();
+        var email = $("#form2").val();
         var pwd =$("#form4").val();
         console.log("username "+  username+ " pwd "+ pwd);
 
@@ -259,14 +239,18 @@
             alert("Enter Username");
             return;
         }
+        if(!email) {
+            alert("Enter Email");
+            return;
+        }
         if(!pwd) {
             alert("Enter Password");
             return;
         }
 
-        if (username !== "" && pwd !== "") {
+        if (username !== "" && email!== "" && pwd !== "") {
 
-                location.href = window.history.back();
+            location.href = "index.html";
 
         }
     }
