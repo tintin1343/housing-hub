@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Housing-Hub</title>
+    <title>Housing-Hub | Login</title>
 
     <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
@@ -58,7 +58,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="wiki/wiki.html">Wiki</a>
                 </li>
-                <li class="nav-item" style="display:none;">
+                <li class="nav-item">
                     <a class="nav-link" href="login.html">Login</a>
                 </li>
             </ul>
@@ -74,25 +74,25 @@
             <a class="brand" href="index.html"><img src="images/hub_logo.png" class="img-fluid"/></a>
 
             <ul class="side-nav collapsible collapsible-accordion scrolling-navbar" id="mobile-menu" style="height:100%">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <!-- Side navigation links -->
                 <li class="dropdown">
                     <a class="collapsible-header waves-light dropdown dropdown-toggle" href="#">Sections</a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li class="nav-item"><a class="nav-link" href="finance/finance.html">Finance</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="house/house.html">House</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="process/process.html">Process</a>
-                                <li class="nav-item"> <a class="nav-link" href="people/people.html">People</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="wiki/wiki.html">Wiki</a></li>
-                                <li class="nav-item">  <a class="nav-link" href="boston/boston.html">City Government</a></li>
-                            </ul>
-                        </div>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li class="nav-item"><a class="nav-link" href="finance/finance.html">Finance</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="house/house.html">House</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="process/process.html">Process</a>
+                            <li class="nav-item"> <a class="nav-link" href="people/people.html">People</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="wiki/wiki.html">Wiki</a></li>
+                            <li class="nav-item">  <a class="nav-link" href="boston/boston.html">City Government</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="nav-item" id="login-li" style="display:none;">
-                    <a class="nav-link" href="login.html">Login</a>
+                <li class="nav-item active" id="login-li" style="display:none;">
+                    <a class="nav-link" href="login.html">Login<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item" id="log-out-li" style="display:none;">
                     <a class="nav-link" href="login.html">Logout</a>
@@ -117,89 +117,51 @@
 <main>
     <div class="container">
         <div class="row">
-            <div class="jumbotron">
-                <h1>Welcome to the Housing Hub!</h1>
-                <p>Is this house in good condition? Is this neighborhood safe? </p>
+            <!--<div class="jumbotron">-->
 
-                 <a class="btn btn-primary page-scroll" href="#feature-icons" role="button" data-target="#feature-icons">Know More</a>
-            </div>
+                <!--Form without header-->
+                <div class="card col-lg-12">
+                    <div class="card-block">
+                        <form>
+                        <!--Header-->
+                        <div class="text-xs-center">
+                            <h3><i class="fa fa-lock"></i> Login:</h3>
+                            <hr class="mt-2 mb-2">
+                        </div>
+
+                        <!--Body-->
+                        <div class="md-form">
+                            <i class="fa fa-envelope prefix"></i>
+                            <input type="text" id="form2" class="form-control">
+                            <label for="form2">Enter Username</label>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-lock prefix"></i>
+                            <input type="password" id="form4" class="form-control">
+                            <label for="form4">Enter Password</label>
+                        </div>
+
+                        <div class="text-xs-center">
+                            <button type="button" class="btn btn-primary" onclick="onLogin();">Login</button>
+                        </div>
+                        </form>
+                    </div>
+
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <div class="options">
+                            <p>Not a member? <a href="#">Sign Up</a></p>
+                            <p>Forgot <a href="#">Password?</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/Form without header-->
+
+           <!-- </div>-->
         </div>
     </div>
-    <div class="container tab-pane active fadeInDown" id="feature-icons">
-        <h2 class="col-lg-12">Sections</h2>
-        <hr>
-        <br>
-        <div class="row text-xs-center">
-            <div class="col-xs-6">
-                <a href="finance/finance.html" class="thumbnail">
-                    <img src="images/money_black.svg" alt="Finances" class="img-fluid card-title">
-                    <h4 class="card-title">Finance</h4>
-                </a>
-            </div>
-            <div class="col-xs-6">
-                <a href="house/house.html" class="thumbnail">
-                    <img src="images/ic_domain_black_48px.svg" alt="House" class="img-fluid card-title">
-                    <h4 class="card-title">House</h4>
-                </a>
-
-            </div>
-        </div>
-        <br>
-
-        <div class="row text-xs-center">
-            <div class="col-xs-6">
-                <a href="process/process.html" class="thumbnail">
-                    <img src="images/process_black.svg" alt="Process"  class="img-fluid card-title">
-                    <h4 class="card-title">Process</h4>
-                </a>
-            </div>
-            <div class="col-xs-6">
-                <a href="people/people.html" class="thumbnail">
-                    <img src="images/people_black.svg" alt="People">
-                    <h4 class="card-title">People</h4>
-                </a>
-
-            </div>
-        </div>
-        <br>
-        <div class="row text-xs-center">
-            <div class="col-xs-6">
-                <a href="wiki/wiki.html" class="thumbnail">
-                    <img src="images/wiki2.svg" alt="Wiki" style="width:48px;height:48px;">
-                    <h4 class="card-title">Wiki</h4>
-                </a>
-
-            </div>
-            <div class="col-xs-6">
-                <a href="boston/boston.html" class="thumbnail">
-                    <img src="images/location_city_black_48px.svg" alt="Boston">
-                    <h4 class="card-title">City Government</h4>
-                </a>
-
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="jumbotron">
-                <h3>What are these sections?</h3>
-                <p>Each section contains articles, tools, and information about a particular topic related to homebuying</p>
-                <p>Know more about Finances, Processes, People, Property (Houses) and Boston in general. Click on the icons to further explore the section
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-        <!--Panel-->
-            <div class="card card-block">
-                <h3 class="card-title">Home Buying Process  - Step-by-Step Guide</h3>
-                <p>We understand home buying is a confusing process. Understand the home-buying process step by step.</p>
-                <a class="btn btn-primary page-scroll" href="process/homebuying-step-by-step.html" role="button" >Home Buying - Step By Step Guide</a>
-
-            </div>
-            <!--/.Panel-->
-        </div>
-        </div>
 
 </main>
 <!--Footer-->
@@ -226,7 +188,7 @@
 
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<!--<script src="js/material.min.js"></script>-->
+<script src="js/material.min.js"></script>
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 <!-- Stepper CSS minified -->
 <!--<link rel="stylesheet" href="css/material.min.css">
@@ -255,8 +217,34 @@
 <script>
     $(function(){
         $(".foot-mobile").load("footer.html");
-
     });
+
+</script>
+
+<script>
+    var history = window.history;
+   // console.log(window.history +" "+  window.history.state);
+    function onLogin(){
+        //console.log(window.history.back());
+        var username = $("#form2").val();
+        var pwd =$("#form4").val();
+        console.log("username "+  username+ " pwd "+ pwd);
+
+        if(!username) {
+            alert("Enter Username");
+            return;
+        }
+        if(!pwd) {
+            alert("Enter Password");
+            return;
+        }
+
+        if (username !== "" && pwd !== "") {
+
+                location.href = window.history.back();
+
+        }
+    }
 </script>
 
 <script type="text/javascript">
