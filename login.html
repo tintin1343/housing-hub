@@ -243,6 +243,11 @@
 <script>
     $(function(){
         $(".foot-mobile").load("footer.html");
+        $("a").on("click", function(){
+            console.log(location.href + " "+ this.href);
+            localStorage.setItem("nextpage",this.href);
+            localStorage.setItem("previouspage",location.href);
+        });
     });
 
 </script>
@@ -269,7 +274,13 @@
             localStorage.setItem("username", username);
             localStorage.setItem("password",pwd);
 
-            location.href = window.history.back();
+            if(localStorage.getItem("previouspage") === "http://localhost:63342/housing-hub/wiki/wiki.html") {
+                location.href = "http://localhost:63342/housing-hub/wiki/add-article.html"
+            }else{
+                location.href = window.history.back();
+            }
+
+
         }
     }
 </script>

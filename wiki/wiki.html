@@ -38,7 +38,7 @@
                     <a class="nav-link" href="wiki.html">Wiki <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="add-article.html">Add Article</a>
+                    <a class="nav-link" onclick="checkRedirect()" href="#">Add Article</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Browse</a>
@@ -75,7 +75,7 @@
                     <a class="nav-link" href="wiki.html">Wiki <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="add-article.html">Add Article</a>
+                    <a class="nav-link" onclick="checkRedirect()" href="#">Add Article</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Browse</a>
@@ -117,7 +117,7 @@
         <div class="row text-xs-center">
             
             <div class="col-xs-6">
-                <a href="add-article.html" class="thumbnail">
+                <a href="#" onclick="checkRedirect()" class="thumbnail">
                     <img src="../images/icons/wiki/add_article_black.svg" alt="Add article" class="img-fluid card-title" style="width:48px;height:48px;">
                     <h4 class="card-title">Add Article</h4>
                 </a>
@@ -261,8 +261,26 @@
 <script>
     $(function(){
         $(".foot-mobile").load("../footer.html");
+
+       $("a").on("click", function(){
+            console.log(location.href + " "+ this.href);
+            localStorage.setItem("nextpage",this.href);
+            localStorage.setItem("previouspage",location.href);
+        });
     });
 
+function checkRedirect(){
+    console.log('In Check Reddirect');
+
+        if(!localStorage.getItem("username")) {
+           // console.log(location.href + " "+ this.href);
+            location.href="../login.html";
+        }
+        else{
+            console.log(location.href + " "+ this.href);
+            location.href="add-article.html";
+        }
+    }
 </script>
 
 <!--<script>

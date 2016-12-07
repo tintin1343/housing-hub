@@ -265,6 +265,12 @@
         $("#userName").text('');
         location.href="index.html";
     }
+
+    $("a").on("click", function(){
+        console.log(location.href + " "+ this.href);
+        localStorage.setItem("nextpage",this.href);
+        localStorage.setItem("previouspage",location.href);
+    });
 </script>
 
 <script type="text/javascript">
