@@ -90,7 +90,13 @@
                     <a class="nav-link" href="maps.html">Maps</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Report Incidents</a>
+                    <a class="nav-link" href="areas.html">Areas <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" id="login-li">
+                    <a class="nav-link" href="../login.html">Login</a>
+                </li>
+                <li class="nav-item" id="log-out-li" style="display:none;">
+                    <a class="nav-link" href="#" onclick="logout()">Logout</a>
                 </li>
             </ul>
         </div>
@@ -103,6 +109,9 @@
         <li class="breadcrumb-item active"><a href="house.html">House</a></li>
     </ol>
     <div class="container">
+        <div class="row" id="userNameLabel" style="display:none;">
+            <h5 id="userName" style="float:right;padding-right:10px;padding-top:5px;"></h5>
+        </div>
         <div class="row">
             <div class="jumbotron">
                 <h1>Inspection Checklist</h1>
@@ -190,7 +199,43 @@
 <script src="../js/jquery.easing.min.js"></script>
 <script src="../js/scrolling-nav.js"></script>
 
+<script>
+$(function(){
+$(".foot-mobile").load("../footer.html");
 
+if(localStorage.getItem("username") !== null) {
+$("#userName").text('Hi, '+ localStorage.getItem("username"));
+$("#userNameLabel").css("display","block");
+$("#log-out-li").css("display","block");
+$("#login-li").css("display","none");
+}
+
+$("a").on("click", function(){
+console.log(location.href + " "+ this.href);
+localStorage.setItem("nextpage",this.href);
+localStorage.setItem("previouspage",location.href);
+});
+});
+
+function checkRedirect(){
+console.log('In Check Reddirect');
+
+if(!localStorage.getItem("username")) {
+// console.log(location.href + " "+ this.href);
+location.href="../login.html";
+}
+else{
+console.log(location.href + " "+ this.href);
+location.href="add-article.html";
+}
+}
+function logout(){
+localStorage.clear();
+$("#userNameLabel").css("display","none");
+$("#userName").text('');
+location.href="../index.html";
+}
+</script>
 
 <script>
     $(".button-collapse").sideNav();

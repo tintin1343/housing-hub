@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54c4990d-346b-4d8d-a9ab-e06f6222a537" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/people/agents.html" afterPath="$PROJECT_DIR$/people/agents.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/people/handymen.html" afterPath="$PROJECT_DIR$/people/handymen.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/people/inspectors.html" afterPath="$PROJECT_DIR$/people/inspectors.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/people/lawyers.html" afterPath="$PROJECT_DIR$/people/lawyers.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/people/people.html" afterPath="$PROJECT_DIR$/people/people.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/people/realtors.html" afterPath="$PROJECT_DIR$/people/realtors.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/house/areas.html" afterPath="$PROJECT_DIR$/house/areas.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/house/house.html" afterPath="$PROJECT_DIR$/house/house.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/house/inspection-checklist.html" afterPath="$PROJECT_DIR$/house/inspection-checklist.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/house/property-checkup.html" afterPath="$PROJECT_DIR$/house/property-checkup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/house/schools.html" afterPath="$PROJECT_DIR$/house/schools.html" />
     </list>
     <ignored path="housing-hub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/wiki/wiki.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-13.235294">
-              <caret line="106" column="21" selection-start-line="101" selection-start-column="16" selection-end-line="106" selection-end-column="21" />
+              <caret line="120" column="14" selection-start-line="118" selection-start-column="6" selection-end-line="120" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#li#9;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -43,27 +41,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inspectors.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/people/inspectors.html">
+      <file leaf-file-name="house.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/house/house.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5720054">
-              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+            <state vertical-scroll-proportion="-13.235294">
+              <caret line="258" column="1" selection-start-line="258" selection-start-column="1" selection-end-line="294" selection-end-column="9" />
+              <folding>
+                <element signature="n#style#0;n#li#9;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="areas.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/house/areas.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.764706">
+              <caret line="281" column="0" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#li#9;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inspection-checklist.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/house/inspection-checklist.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7644684">
+              <caret line="202" column="13" selection-start-line="202" selection-start-column="13" selection-end-line="202" selection-end-column="13" />
               <folding>
                 <element signature="n#style#0;n#li#8;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#iframe#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lawyers.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/people/lawyers.html">
+      <file leaf-file-name="property-checkup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/house/property-checkup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.441176">
-              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+            <state vertical-scroll-proportion="-15.970589">
+              <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#li#7;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#9;n#ul#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#9;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -71,26 +99,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="realtors.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/people/realtors.html">
+      <file leaf-file-name="schools.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/house/schools.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.441176">
-              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+            <state vertical-scroll-proportion="-11.558824">
+              <caret line="207" column="1" selection-start-line="207" selection-start-column="1" selection-end-line="207" selection-end-column="1" />
               <folding>
-                <element signature="n#style#0;n#li#8;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="agents.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/people/agents.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.352941">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="21" selection-end-column="51" />
-              <folding>
+                <element signature="n#style#0;n#li#8;n#ul#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#8;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -121,18 +136,13 @@
         <option value="$PROJECT_DIR$/help.html" />
         <option value="$PROJECT_DIR$/src/mdl-stepper.scss" />
         <option value="$PROJECT_DIR$/js/step.js" />
-        <option value="$PROJECT_DIR$/house/areas.html" />
         <option value="$PROJECT_DIR$/house/directions.html" />
         <option value="$PROJECT_DIR$/house/school_maps.html" />
         <option value="$PROJECT_DIR$/house/safety.html" />
-        <option value="$PROJECT_DIR$/house/property-checkup.html" />
         <option value="$PROJECT_DIR$/imports.html" />
         <option value="$PROJECT_DIR$/finance/creditreport.html" />
         <option value="$PROJECT_DIR$/finance/credit-report-steps.html" />
         <option value="$PROJECT_DIR$/house/maps.html" />
-        <option value="$PROJECT_DIR$/house/schools.html" />
-        <option value="$PROJECT_DIR$/house/house.html" />
-        <option value="$PROJECT_DIR$/house/inspection-checklist.html" />
         <option value="$PROJECT_DIR$/finance/finances-step-by-step.html" />
         <option value="$PROJECT_DIR$/finance/finance.html" />
         <option value="$PROJECT_DIR$/sign-up.html" />
@@ -166,6 +176,11 @@
         <option value="$PROJECT_DIR$/people/realtors.html" />
         <option value="$PROJECT_DIR$/people/lawyers.html" />
         <option value="$PROJECT_DIR$/people/inspectors.html" />
+        <option value="$PROJECT_DIR$/house/house.html" />
+        <option value="$PROJECT_DIR$/house/areas.html" />
+        <option value="$PROJECT_DIR$/house/property-checkup.html" />
+        <option value="$PROJECT_DIR$/house/inspection-checklist.html" />
+        <option value="$PROJECT_DIR$/house/schools.html" />
       </list>
     </option>
   </component>
@@ -233,7 +248,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="people" />
+              <option name="myItemId" value="house" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -422,30 +437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/house/areas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.941176">
-          <caret line="150" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="234" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/house/directions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.764706">
-          <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/house/property-checkup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.029411">
-          <caret line="139" column="21" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/house/school_maps.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="103.55882">
@@ -504,14 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/house/schools.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.133059">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/finance/credit-report-steps.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-36.882355">
@@ -524,14 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.3529415">
           <caret line="159" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="219" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/house/house.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.617647">
-          <caret line="176" column="50" selection-start-line="176" selection-start-column="50" selection-end-line="176" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -575,16 +550,6 @@
             <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/house/inspection-checklist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7065949">
-          <caret line="126" column="41" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -892,18 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wiki/wiki.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.235294">
-          <caret line="106" column="21" selection-start-line="101" selection-start-column="16" selection-end-line="106" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#li#9;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/people/agents.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.352941">
@@ -942,12 +895,95 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/people/inspectors.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5720054">
+        <state vertical-scroll-proportion="-12.5">
           <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
           <folding>
             <element signature="n#style#0;n#li#8;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wiki/wiki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.235294">
+          <caret line="120" column="14" selection-start-line="118" selection-start-column="6" selection-end-line="120" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#li#9;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/directions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033647377">
+          <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/house.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.235294">
+          <caret line="258" column="1" selection-start-line="258" selection-start-column="1" selection-end-line="294" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#li#9;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/areas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.764706">
+          <caret line="281" column="0" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#li#9;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/schools.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.558824">
+          <caret line="207" column="1" selection-start-line="207" selection-start-column="1" selection-end-line="207" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#li#8;n#ul#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#8;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/property-checkup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.970589">
+          <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#li#9;n#ul#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#9;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house/inspection-checklist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7644684">
+          <caret line="202" column="13" selection-start-line="202" selection-start-column="13" selection-end-line="202" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#li#8;n#ul#0;n#div#1;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
