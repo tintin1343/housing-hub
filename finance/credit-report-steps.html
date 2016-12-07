@@ -17,54 +17,8 @@
     <!-- Material Design Bootstrap -->
     <link href="../css/mdb.min.css" rel="stylesheet">
 
-    <!-- Template styles -->
-    <style rel="stylesheet">
-        /* TEMPLATE STYLES */
-        /* Necessary for full page carousel*/
-
-        html,
-        body {
-            height: 100%;
-        }
-        /* Navigation*/
-
-        .navbar {
-            background-color: transparent;
-        }
-
-        .top-nav-collapse {
-            background-color: #4285F4;
-        }
-
-        footer.page-footer {
-            background-color: #4285F4;
-        }
-
-        @media only screen and (max-width: 768px) {
-            .navbar {
-                /*background-color: #4285F4;*/
-                background-color: transparent;
-            }
-            .brand {
-                display: block;
-                float: right;
-                width: 23%;
-                height: 46px;
-                margin: 0;
-                margin-top: -46px;
-            }
-        }
-        @media only screen and (min-width: 771px) {
-            .brand {
-                /*background-color: #4285F4;*/
-                display:none;
-            }
-            .navbar {
-                /*background-color: #4285F4;*/
-                background-color: transparent !important;
-            }
-        }
-    </style>
+    <!--Custom style-->
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -153,56 +107,120 @@
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
         <li class="breadcrumb-item"><a href="finance.html">Finances</a></li>
-        <li class="breadcrumb-item"><a href="#">About Credit Reports</a></li>
+        <!--<li class="breadcrumb-item"><a href="#">About Credit Reports</a></li>-->
     </ol>
     <div class="container" id="feature-icons">
         <div class="row">
             <br>
             <h2 class="doc-title doc-first col-lg-12">About Credit Reports</h2>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <!--Panel-->
-            <div class="card card-block">
-                <h3 class="card-title">Fix your credit  - Step-by-Step Guide</h3>
-                <p>We understand importance of maintaining a good credit score. Understand the how you can do that in a step by step way.</p>
-                <a class="btn btn-primary page-scroll" href="credit-report-steps.html" role="button" >Improve Credit Score </a>
-
-            </div>
-            <!--/.Panel-->
+        <div class="row col-lg-12">
+            <br>
+            <p>Credit Score is a very important factor when you apply for a mortgage or apply for any financing.
+                Understanding what impacts your credit score and what your credit report contains can help you take
+                the necessary steps you need to, get the perfect credit score.
+            </p>
         </div>
     </div>
-    <!--Panel-->
-    <div class="card card-block">
-        <h4 class="card-title">Where can I get my credit score?
-</h4>
-        <p class="card-text">There are a few main ways to get your credit score, including from a credit card or other loan statement, a non-profit counselor, or for a fee from a credit reporting agency.</p>
-        <h6>Consumer Financial Protection Bureau
-</h6>
-        <a href="creditreport-article-1.html" class="btn btn-primary btn-lg">Read More</a>
+
+    <br>
+    <!--Accordion wrapper-->
+    <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+
+        <!--First panel-->
+        <div class="panel panel-default">
+
+            <!--Panel heading-->
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h5 class="panel-title">
+                    <a class="arrow-r" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Components of Credit Score <i class="fa fa-angle-down rotate-icon"></i>
+                    </a>
+                </h5>
+            </div>
+
+            <!--Panel body-->
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <p>The following factors affect your credit score: </p>
+               <ol type="a">
+                   <li>Payment History</li>
+                   <li>Amounts Owed</li>
+                   <li>Length of Credit History</li>
+                   <li>New Credit</li>
+                   <li>Types of Credits used</li>
+               </ol>
+            </div>
+        </div>
+        <!--/.First panel-->
+
+        <!--Second panel-->
+        <div class="panel panel-default">
+
+            <!--Panel heading-->
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h5 class="panel-title">
+                    <a class="arrow-r" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                        Median range / Overall range <i class="fa fa-angle-down rotate-icon"></i>
+                    </a>
+                </h5>
+            </div>
+
+            <!--Panel body-->
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+               <a href="www.myfico.com">FICO</a> Median Score is 723. The range of credit score is 350-850.
+            </div>
+        </div>
+        <!--/.Second panel-->
+
+        <!--Third panel-->
+        <div class="panel panel-default">
+
+            <!--Panel heading-->
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h5 class="panel-title">
+                    <a class="arrow-r" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                        Get Free Credit Report <i class="fa fa-angle-down rotate-icon"></i>
+                    </a>
+                </h5>
+            </div>
+
+            <!--Panel body-->
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                Get your free FICO credit score report at <a href="www.myfico.com">Get free FICO credit report</a>
+            </div>
+        </div>
+        <!--/.Third panel-->
+
+        <!--Third panel-->
+        <div class="panel panel-default">
+
+            <!--Panel heading-->
+            <div class="panel-heading" role="tab" id="headingFour">
+                <h5 class="panel-title">
+                    <a class="arrow-r" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                        Full Credit Report <i class="fa fa-angle-down rotate-icon"></i>
+                    </a>
+                </h5>
+            </div>
+
+            <!--Panel body-->
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <p>A full credit report is different. You can get a full report from credit reporting agencies: Equifax, Experian and TransUnion. This report contains:
+                </p>
+                <p>This report contains the following:</p>
+                <ol type="a">
+                    <li>Credit History: Payment History, etc.</li>
+                    <li>Who else is checking up on your credit</li>
+                    <li>Any judgements against you. For example, bankruptcy. </li>
+                    <li>Personal Information</li>
+                    <li>A section for comments by you. This occurs if you have disputed the report in the past.</li>
+                </ol>
+            </div>
+        </div>
+        <!--/.Third panel-->
+
     </div>
-    <!--/.Panel-->
-    <!--Panel-->
-    <div class="card card-block">
-        <h4 class="card-title">How can I maintain a good credit score?
-</h4>
-        <p class="card-text">To get and keep a good credit score, first pay your bills on time.</p>
-        <h6>Consumer Financial Protection Bureau
-</h6>
-        <a href="creditreport-article-2.html" class="btn btn-primary btn-lg">Read More</a>
-    </div>
-    <!--/.Panel-->
-    <!--Panel-->
-    <div class="card card-block">
-        <h4 class="card-title">How does my credit score affect my ability to get a mortgage loan?
-</h4>
-        <p class="card-text">The Consumer Financial Protection Bureau is a government agency built to protect consumers. Our free resources help you have the information you need to make informed financial decisions.</p>
-        <h6>Consumer Financial Protection Bureau
-</h6>
-        <a href="creditreport-article-3.html" class="btn btn-primary btn-lg">Read More</a>
-    </div>
-    <!--/.Panel-->
+    <!--/.Accordion wrapper-->
+
 
 </main>
 <!--Footer-->
@@ -237,6 +255,17 @@
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="../js/mdb.min.js"></script>
 
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/scrolling-nav.js"></script>
+
+
+<script>
+    $(function(){
+        $(".foot-mobile").load("../footer.html");
+    });
+
+</script>
+
 <script>
     $(".button-collapse").sideNav();
 </script>
@@ -254,7 +283,7 @@
          $('.navbar-fixed-top').css('background-color', '#4285F4');*/
         var navStart = $('.navbar-fixed-top').offset().top;
         var scroll = $(window).scrollTop() /500;
-       // console.log('scroll '+ scroll+ 'navStart '+ navStart);
+        //console.log('scroll '+ scroll+ 'navStart '+ navStart);
         if (scroll===0 && navStart===0) {
             $('.navbar-fixed-top').css('opacity', 1);
             $('.navbar-fixed-top').css('background-color', 'transparent');
