@@ -259,18 +259,19 @@
 
     });
 
-    function logout(){
-        localStorage.clear();
-        $("#userNameLabel").css("display","none");
-        $("#userName").text('');
-        location.href="index.html";
-    }
 
     $("a").on("click", function(){
         console.log(location.href + " "+ this.href);
         localStorage.setItem("nextpage",this.href);
         localStorage.setItem("previouspage",location.href);
     });
+
+    function logout(){
+        localStorage.clear();
+        $("#userNameLabel").css("display","none");
+        $("#userName").text('');
+        location.href="index.html";
+    }
 </script>
 
 <script type="text/javascript">

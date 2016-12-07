@@ -13,6 +13,13 @@
     <link href="../css/scrolling-nav.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet">
+
+    <!--Custom style-->
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -92,6 +99,12 @@
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Help</a>
                 </li>
+                <li class="nav-item" id="login-li">
+                    <a class="nav-link" href="../login.html">Login</a>
+                </li>
+                <li class="nav-item" id="log-out-li" style="display:none;">
+                    <a class="nav-link" href="#" onclick="logout()">Logout</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -103,6 +116,9 @@
         <li class="breadcrumb-item active"><a href="wiki.html">Wiki</a></li>
     </ol>
     <div class="container">
+        <div class="row" id="userNameLabel" style="display:none;">
+            <h5 id="userName" style="float:right;padding-right:10px;padding-top:5px;"></h5>
+        </div>
         <div class="row">
             <div class="jumbotron">
                 <h1>Welcome to Housing Wiki</h1>
@@ -253,14 +269,20 @@
 
 
 <!-- SCRIPTS -->
-<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.min.css">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 <script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
 
 <script>
     $(function(){
         $(".foot-mobile").load("../footer.html");
+
+        if(localStorage.getItem("username") !== null) {
+            $("#userName").text('Hi, '+ localStorage.getItem("username"));
+            $("#userNameLabel").css("display","block");
+            $("#log-out-li").css("display","block");
+            $("#login-li").css("display","none");
+        }
 
        $("a").on("click", function(){
             console.log(location.href + " "+ this.href);
@@ -281,28 +303,14 @@ function checkRedirect(){
             location.href="add-article.html";
         }
     }
+    function logout(){
+        localStorage.clear();
+        $("#userNameLabel").css("display","none");
+        $("#userName").text('');
+        location.href="../index.html";
+    }
 </script>
 
-<!--<script>
-    $(function(){
-        $("#maps").load("school_maps.html");
-    });
-
-</script>-->
-
-<!-- Stepper CSS minified -->
-<link rel="stylesheet" href="../css/stepper.min.css">
-<!-- Bootstrap core CSS -->
-<link href="../css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="../css/mdb.min.css" rel="stylesheet">
-
-<!--Custom style-->
-<link href="../css/style.css" rel="stylesheet">
-<!-- Stepper Javascript minified -->
-<script src="../js/stepper.min.js"></script>
-<!-- script for stepper-->
-<script  src="../js/step.js"></script>
 
 <!-- JQuery -->
 <!-- Bootstrap core JavaScript -->

@@ -7,63 +7,17 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Housing-Hub | Wiki | Pick One for Me</title>
 
+    <!-- Custom CSS -->
+    <link href="../css/scrolling-nav.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Material Design Bootstrap -->
     <link href="../css/mdb.min.css" rel="stylesheet">
 
-    <!-- Template styles -->
-    <style rel="stylesheet">
-        /* TEMPLATE STYLES */
-        /* Necessary for full page carousel*/
-
-        html,
-        body {
-            height: 100%;
-        }
-        /* Navigation*/
-
-        .navbar {
-            background-color: transparent;
-        }
-
-        .top-nav-collapse {
-            background-color: #4285F4;
-        }
-
-        footer.page-footer {
-            background-color: #4285F4;
-        }
-
-        @media only screen and (max-width: 768px) {
-            .navbar {
-                /*background-color: #4285F4;*/
-                background-color: transparent;
-            }
-            .brand {
-                display: block;
-                float: right;
-                width: 23%;
-                height: 46px;
-                margin: 0;
-                margin-top: -46px;
-            }
-        }
-        @media only screen and (min-width: 771px) {
-            .brand {
-                /*background-color: #4285F4;*/
-                display:none;
-            }
-            .navbar {
-                /*background-color: #4285F4;*/
-                background-color: transparent !important;
-            }
-        }
-    </style>
+    <!--Custom style-->
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -143,6 +97,13 @@
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Help</a>
                 </li>
+                <li class="nav-item" id="login-li">
+                    <a class="nav-link" href="../login.html">Login</a>
+                </li>
+                <li class="nav-item" id="log-out-li" style="display:none;">
+                    <a class="nav-link" href="#" onclick="logout()">Logout</a>
+                </li>
+
             </ul>
         </div>
     </nav>
@@ -156,6 +117,9 @@
     </ol>
     <br>
     <div class="container" id="feature-icons">
+        <div class="row" id="userNameLabel" style="display:none;">
+            <h5 id="userName" style="float:right;padding-right:10px;padding-top:5px;"></h5>
+        </div>
         <div class="row">
             <br>
             <h2 class="doc-title doc-first col-lg-12">Down payment</h2>
@@ -206,20 +170,64 @@ There is more risk for lenders when individuals purchase a home as an investment
 <!--/.Footer-->
 
 
+
 <!-- SCRIPTS -->
 
-<!-- JQuery -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
 
+<!-- JQuery -->
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="../js/mdb.min.js"></script>
 
+<!-- Scrolling Nav JavaScript -->
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/scrolling-nav.js"></script>
+
 <script>
     $(".button-collapse").sideNav();
 </script>
+<script>
+    $(function(){
+        $(".foot-mobile").load("../footer.html");
+
+        if(localStorage.getItem("username") !== null) {
+            $("#userName").text('Hi, '+ localStorage.getItem("username"));
+            $("#userNameLabel").css("display","block");
+            $("#log-out-li").css("display","block");
+            $("#login-li").css("display","none");
+        }
+
+        $("a").on("click", function(){
+            console.log(location.href + " "+ this.href);
+            localStorage.setItem("nextpage",this.href);
+            localStorage.setItem("previouspage",location.href);
+        });
+    });
+
+    function checkRedirect(){
+        console.log('In Check Reddirect');
+
+        if(!localStorage.getItem("username")) {
+            // console.log(location.href + " "+ this.href);
+            location.href="../login.html";
+        }
+        else{
+            console.log(location.href + " "+ this.href);
+            location.href="add-article.html";
+        }
+    }
+    function logout(){
+        localStorage.clear();
+        $("#userNameLabel").css("display","none");
+        $("#userName").text('');
+        location.href="../index.html";
+    }
+</script>
+
 
 <script type="text/javascript">
     Waves.attach('.navbar li', ['waves-light']);
