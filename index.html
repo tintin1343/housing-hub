@@ -116,12 +116,8 @@
 </header>
 <main>
     <div class="container">
-        <div class="row" id="userNameLabel">
-            <span style="margin-left:15px;">
-                <input class="" type="text" placeholder="Search" style="width:150px;height:30px;float:right;margin:2px;">
-                <!--<i class="fa fa-search" style="margin-top:10px;float:right"></i>-->
-            </span>
-            <h5 id="userName" style="float:left;padding-left:10px;padding-top:10px;"></h5>
+        <div class="row" id="userNameLabel" style="display:none;">
+            <h5 id="userName" style="float:right;padding-right:10px;padding-top:5px;"></h5>
         </div>
         <div class="row">
             <div class="jumbotron">
@@ -272,7 +268,7 @@
 
     function logout(){
         localStorage.clear();
-        $("#userName").css("display","none");
+        $("#userNameLabel").css("display","none");
         $("#userName").text('');
         location.href="index.html";
     }
