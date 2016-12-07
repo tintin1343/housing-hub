@@ -97,6 +97,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="creditreport.html">About Credit Reports</a>
                 </li>
+                <li class="nav-item" id="login-li">
+                    <a class="nav-link" href="../login.html">Login</a>
+                </li>
+                <li class="nav-item" id="log-out-li" style="display:none;">
+                    <a class="nav-link" href="#" onclick="logout()">Logout</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -108,6 +114,9 @@
         <li class="breadcrumb-item active"><a href="finance.html">Finances</a></li>
     </ol>
     <div class="container">
+        <div class="row" id="userNameLabel" style="display:none;">
+            <h5 id="userName" style="float:right;padding-right:10px;padding-top:5px;"></h5>
+        </div>
         <div class="row">
             <div class="jumbotron">
                 <h1>Finances</h1>
@@ -181,43 +190,7 @@
             </div>
         </div>
     </div>
-    <!--<div class="container">
-        <div class="row">
-            &lt;!&ndash;Panel&ndash;&gt;
-            <div class="card card-block">
-                <h3 class="card-title">Financial Process  - Step-by-Step Guide</h3>
-                <p>We understand home buying is a confusing process. Learn how to arrange for finances in a step by step.</p>
-                <a class="btn btn-primary page-scroll" href="process/finances-step-by-step.html" role="button" >Finances - Step By Step Guide</a>
 
-            </div>
-            &lt;!&ndash;/.Panel&ndash;&gt;
-        </div>
-    </div>-->
-    <!-- Modal -->
-<!--    <div class="modal fade" id="soon_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            &lt;!&ndash;Content&ndash;&gt;
-            <div class="modal-content">
-                &lt;!&ndash;Header&ndash;&gt;
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">Coming Soon</h4>
-                </div>
-                &lt;!&ndash;Body&ndash;&gt;
-                <div class="modal-body">
-                    We are working hard to bring you the "Financial - Step by step module"  as soon as possible.
-                    Stay tuned for updates.
-                </div>
-                &lt;!&ndash;Footer&ndash;&gt;
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-            &lt;!&ndash;/.Content&ndash;&gt;
-        </div>
-    </div>-->
 </main>
 <!--Footer-->
 <footer class="page-footer center-on-small-only">
@@ -242,34 +215,8 @@
 
 <!-- SCRIPTS -->
 
-<!-- SCRIPTS -->
-<!--<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.min.css">
-<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
-
-<script>
-    $(function(){
-        $(".foot-mobile").load("../footer.html");
-    });
-
-</script>
-
-<!--<script>
-    $(function(){
-        $("#maps").load("school_maps.html");
-    });
-
-</script>-->
-
-<!-- Stepper CSS minified -->
-<link rel="stylesheet" href="../css/stepper.min.css">
-
-<!-- Stepper Javascript minified
-<script src="../js/stepper.min.js"></script>
-&lt;!&ndash; script for stepper&ndash;&gt;
-<script  src="../js/step.js"></script>-->
-
 <!-- JQuery -->
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
@@ -282,6 +229,43 @@
 <script src="../js/scrolling-nav.js"></script>
 
 
+<script>
+    $(function(){
+        $(".foot-mobile").load("../footer.html");
+
+        if(localStorage.getItem("username") !== null) {
+            $("#userName").text('Hi, '+ localStorage.getItem("username"));
+            $("#userNameLabel").css("display","block");
+            $("#log-out-li").css("display","block");
+            $("#login-li").css("display","none");
+        }
+
+        $("a").on("click", function(){
+            console.log(location.href + " "+ this.href);
+            localStorage.setItem("nextpage",this.href);
+            localStorage.setItem("previouspage",location.href);
+        });
+    });
+
+    function checkRedirect(){
+        console.log('In Check Reddirect');
+
+        if(!localStorage.getItem("username")) {
+            // console.log(location.href + " "+ this.href);
+            location.href="../login.html";
+        }
+        else{
+            console.log(location.href + " "+ this.href);
+            location.href="add-article.html";
+        }
+    }
+    function logout(){
+        localStorage.clear();
+        $("#userNameLabel").css("display","none");
+        $("#userName").text('');
+        location.href="../index.html";
+    }
+</script>
 
 <script>
     $(".button-collapse").sideNav();
