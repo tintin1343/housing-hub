@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54c4990d-346b-4d8d-a9ab-e06f6222a537" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/house/inspection-checklist.html" afterPath="$PROJECT_DIR$/house/inspection-checklist.html" />
     </list>
     <ignored path="housing-hub.iws" />
@@ -63,9 +62,11 @@
       <file leaf-file-name="inspection-checklist.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/house/inspection-checklist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4458162">
-              <caret line="118" column="194" selection-start-line="118" selection-start-column="194" selection-end-line="118" selection-end-column="194" />
-              <folding />
+            <state vertical-scroll-proportion="0.30864197">
+              <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+              <folding>
+                <element signature="n#style#0;n#iframe#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -813,9 +814,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/house/inspection-checklist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4458162">
-          <caret line="118" column="194" selection-start-line="118" selection-start-column="194" selection-end-line="118" selection-end-column="194" />
-          <folding />
+        <state vertical-scroll-proportion="0.30864197">
+          <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
