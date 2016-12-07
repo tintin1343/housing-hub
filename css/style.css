@@ -83,6 +83,14 @@ and (orientation: landscape) {
       /*  background-color: pink;*/
     }
 
+    #footer-desktop {
+        display:none;
+    }
+
+    #footer-desktop-hr {
+        display:none;
+    }
+
 
 }
 
