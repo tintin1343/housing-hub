@@ -116,8 +116,14 @@
 
     </ol>
     <div class="container" id="feature-icons">
-        <div class="row" id="userNameLabel" style="display:none;">
-            <h5 id="userName" style="float:right;padding-right:10px;padding-top:5px;"></h5>
+        <div id="userNameLabel" style="font-size: larger;height:37px;">
+            <div id="userName" style="display: inline; vertical-align:sub">
+
+            </div>
+            <div style="display: inline;float:right;vertical-align:sub">
+                <input type="text" placeholder="Search" style="width:150px;height:25px;">
+                <button class="fa fa-search" style="vertical-align: inherit;border:none" data-toggle="modal" data-target="#soon_modal"></button>
+            </div>
         </div>
         <div class="row">
             <br>
@@ -156,6 +162,31 @@ Freddie Mac was chartered by Congress in 1970 to keep money flowing to mortgage 
         <a href="askanexpert-article-3.html" class="btn btn-primary btn-lg">Read More</a>
     </div>
     <!--/.Panel-->
+     <!-- Modal -->
+    <div class="modal fade" id="soon_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Coming Soon</h4>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <p>We are working hard to bring you the search feature. We will notify you once it is available.</p>
+                    <p>Meanwhile, you can click on the different icons below or go through the articles to learn more about home buying</p>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
 
 </main>
 <!--Footer-->
@@ -207,12 +238,21 @@ Freddie Mac was chartered by Congress in 1970 to keep money flowing to mortgage 
             $("#login-li").css("display","none");
         }
 
-        $("a").on("click", function(){
-            console.log(location.href + " "+ this.href);
-            localStorage.setItem("nextpage",this.href);
-            localStorage.setItem("previouspage",location.href);
-        });
     });
+
+
+    $("a").on("click", function(){
+        console.log(location.href + " "+ this.href);
+        localStorage.setItem("nextpage",this.href);
+        localStorage.setItem("previouspage",location.href);
+    });
+
+    function logout(){
+        localStorage.clear();
+        $("#userName").css("display","none");
+        $("#userName").text('');
+        location.href="../index.html";
+    }
 
     function checkRedirect(){
         console.log('In Check Reddirect');
@@ -225,12 +265,6 @@ Freddie Mac was chartered by Congress in 1970 to keep money flowing to mortgage 
             console.log(location.href + " "+ this.href);
             location.href="add-article.html";
         }
-    }
-    function logout(){
-        localStorage.clear();
-        $("#userNameLabel").css("display","none");
-        $("#userName").text('');
-        location.href="../index.html";
     }
 </script>
 

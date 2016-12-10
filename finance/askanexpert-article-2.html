@@ -120,9 +120,15 @@
                 <li class="breadcrumb-item"><a href="finance.html">Finance</a></li>
                 <li class="breadcrumb-item active"><a href="askanexpert.html">Expert Opinions</a></li>
             </ol>
-            <div class="row" id="userNameLabel" style="display:none;">
-                <h5 id="userName" style="float:right;padding-right:10px;padding-top:5px;"></h5>
+            <div id="userNameLabel" style="font-size: larger;height:37px;">
+            <div id="userName" style="display: inline; vertical-align:sub">
+
             </div>
+            <div style="display: inline;float:right;vertical-align:sub">
+                <input type="text" placeholder="Search" style="width:150px;height:25px;">
+                <button class="fa fa-search" style="vertical-align: inherit;border:none" data-toggle="modal" data-target="#soon_modal"></button>
+            </div>
+        </div>
             <div class="row">
                 <!-- FIRST SECTION-->
                 <div class="documentation col-lg-12" style="margin-top: 20px;">
@@ -158,6 +164,31 @@ HomeSteps is the real estate sales unit of Freddie Mac. HomeSteps® offers a fre
                 </div>
                 <!-- FIRST SECTION-->
             </div>
+        </div>
+    </div>
+     <!-- Modal -->
+    <div class="modal fade" id="soon_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Coming Soon</h4>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <p>We are working hard to bring you the search feature. We will notify you once it is available.</p>
+                    <p>Meanwhile, you can click on the different icons below or go through the articles to learn more about home buying</p>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!--/.Content-->
         </div>
     </div>
 </main>
@@ -209,12 +240,21 @@ HomeSteps is the real estate sales unit of Freddie Mac. HomeSteps® offers a fre
             $("#login-li").css("display","none");
         }
 
-        $("a").on("click", function(){
-            console.log(location.href + " "+ this.href);
-            localStorage.setItem("nextpage",this.href);
-            localStorage.setItem("previouspage",location.href);
-        });
     });
+
+
+    $("a").on("click", function(){
+        console.log(location.href + " "+ this.href);
+        localStorage.setItem("nextpage",this.href);
+        localStorage.setItem("previouspage",location.href);
+    });
+
+    function logout(){
+        localStorage.clear();
+        $("#userName").css("display","none");
+        $("#userName").text('');
+        location.href="../index.html";
+    }
 
     function checkRedirect(){
         console.log('In Check Reddirect');
@@ -227,12 +267,6 @@ HomeSteps is the real estate sales unit of Freddie Mac. HomeSteps® offers a fre
             console.log(location.href + " "+ this.href);
             location.href="add-article.html";
         }
-    }
-    function logout(){
-        localStorage.clear();
-        $("#userNameLabel").css("display","none");
-        $("#userName").text('');
-        location.href="../index.html";
     }
 </script>
 
