@@ -80,16 +80,16 @@
                 <!-- Side navigation links -->
                 <li class="dropdown">
                     <a class="collapsible-header waves-light dropdown dropdown-toggle" href="#">Sections</a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li class="nav-item"><a class="nav-link" href="finance/finance.html">Finances</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="house/house.html">House</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="process/process.html">Process</a>
-                                <li class="nav-item"> <a class="nav-link" href="people/people.html">People</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="wiki/wiki.html">Wiki</a></li>
-                                <li class="nav-item">  <a class="nav-link" href="boston/boston.html">City Government</a></li>
-                            </ul>
-                        </div>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li class="nav-item"><a class="nav-link" href="finance/finance.html">Finance</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="house/house.html">House</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="process/process.html">Process</a>
+                            <li class="nav-item"> <a class="nav-link" href="people/people.html">People</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="wiki/wiki.html">Wiki</a></li>
+                            <li class="nav-item">  <a class="nav-link" href="boston/boston.html">City Government</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item" id="login-li">
                     <a class="nav-link" href="login.html">Login</a>
@@ -116,15 +116,23 @@
 </header>
 <main>
     <div class="container">
-        <div class="row" id="userNameLabel" style="display:none;">
-            <h5 id="userName" style="float:right;padding-right:10px;padding-top:5px;"></h5>
+        <div id="userNameLabel" style="font-size: larger;height:37px;">
+            <div id="userName" style="display: inline; vertical-align:sub">
+
+            </div>
+            <div style="display: inline;float:right;vertical-align:sub">
+                <input type="text" placeholder="Search" style="width:150px;height:25px;">
+                <button class="fa fa-search btn-primary" style="vertical-align: inherit;border:none"></button>
+            </div>
         </div>
         <div class="row">
             <div class="jumbotron">
                 <h1>Welcome to the Housing Hub!</h1>
-                <p>Is this house in good condition? Is this neighborhood safe? </p>
+                <p>Is this house in good condition? Is this neighborhood safe? Find answers to all your questions here!</p>
+                <p>Search articles, calculate how much mortage can you afford, look at neighborhoods or just understand the home buying process
+                in a step-by-step manner.</p>
 
-                 <a class="btn btn-primary page-scroll" href="#feature-icons" role="button" data-target="#feature-icons">Know More</a>
+                <a class="btn btn-primary page-scroll" href="#feature-icons" role="button" data-target="#feature-icons">Know More</a>
             </div>
         </div>
     </div>
@@ -136,7 +144,7 @@
             <div class="col-xs-6">
                 <a href="finance/finance.html" class="thumbnail">
                     <img src="images/money_black.svg" alt="Finances" class="img-fluid card-title">
-                    <h4 class="card-title">Finances</h4>
+                    <h4 class="card-title">Finance</h4>
                 </a>
             </div>
             <div class="col-xs-6">
@@ -193,7 +201,7 @@
     </div>
     <div class="container">
         <div class="row">
-        <!--Panel-->
+            <!--Panel-->
             <div class="card card-block">
                 <h3 class="card-title">Home Buying Process  - Step-by-Step Guide</h3>
                 <p>We understand home buying is a confusing process. Understand the home-buying process step by step.</p>
@@ -202,7 +210,7 @@
             </div>
             <!--/.Panel-->
         </div>
-        </div>
+    </div>
 
 </main>
 <!--Footer-->
@@ -268,7 +276,7 @@
 
     function logout(){
         localStorage.clear();
-        $("#userNameLabel").css("display","none");
+        $("#userName").css("display","none");
         $("#userName").text('');
         location.href="index.html";
     }
