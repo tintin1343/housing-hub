@@ -122,7 +122,7 @@
             </div>
             <div style="display: inline;float:right;vertical-align:sub">
                 <input type="text" placeholder="Search" style="width:150px;height:25px;">
-                <button class="fa fa-search" style="vertical-align: inherit;border:none"></button>
+                <button class="fa fa-search" style="vertical-align: inherit;border:none" data-toggle="modal" data-target="#soon_modal"></button>
             </div>
         </div>
         <div class="row">
@@ -209,6 +209,32 @@
 
             </div>
             <!--/.Panel-->
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="soon_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Coming Soon</h4>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <p>We are working hard to bring you the search feature. We will notify you once it is available.</p>
+                    <p>Meanwhile, you can click on the different icons below or go through the articles to learn more about home buying</p>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!--/.Content-->
         </div>
     </div>
 
