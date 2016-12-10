@@ -117,8 +117,14 @@
         <li class="breadcrumb-item active"><a href="house.html">House</a></li>
     </ol>
     <div class="container">
-        <div class="row" id="userNameLabel" style="display:none;">
-            <h5 id="userName" style="float:right;padding-right:10px;padding-top:5px;"></h5>
+        <div id="userNameLabel" style="font-size: larger;height:37px;">
+            <div id="userName" style="display: inline; vertical-align:sub">
+
+            </div>
+            <div style="display: inline;float:right;vertical-align:sub">
+                <input type="text" placeholder="Search" style="width:150px;height:25px;">
+                <button class="fa fa-search" style="vertical-align: inherit;border:none" data-toggle="modal" data-target="#soon_modal"></button>
+            </div>
         </div>
         <div class="row">
             <div class="jumbotron">
@@ -257,6 +263,7 @@
 <script src="../js/scrolling-nav.js"></script>
 
 <script>
+
     $(function(){
         $(".foot-mobile").load("../footer.html");
 
@@ -267,12 +274,21 @@
             $("#login-li").css("display","none");
         }
 
-        $("a").on("click", function(){
-            console.log(location.href + " "+ this.href);
-            localStorage.setItem("nextpage",this.href);
-            localStorage.setItem("previouspage",location.href);
-        });
     });
+
+
+    $("a").on("click", function(){
+        console.log(location.href + " "+ this.href);
+        localStorage.setItem("nextpage",this.href);
+        localStorage.setItem("previouspage",location.href);
+    });
+
+    function logout(){
+        localStorage.clear();
+        $("#userName").css("display","none");
+        $("#userName").text('');
+        location.href="../index.html";
+    }
 
     function checkRedirect(){
         console.log('In Check Reddirect');
@@ -285,12 +301,6 @@
             console.log(location.href + " "+ this.href);
             location.href="add-article.html";
         }
-    }
-    function logout(){
-        localStorage.clear();
-        $("#userNameLabel").css("display","none");
-        $("#userName").text('');
-        location.href="../index.html";
     }
 </script>
 
