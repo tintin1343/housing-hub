@@ -283,7 +283,10 @@
 <script>
     $(function(){
         $(".foot-mobile").load("footer.html");
-
+        if( !localStorage.getItem("onStep"))
+        {
+            localStorage.setItem("onStep",1);
+        }
         if(localStorage.getItem("username") !== null) {
             $("#userName").text('Hi, '+ localStorage.getItem("username"));
             $("#userNameLabel").css("display","block");
