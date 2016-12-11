@@ -92,6 +92,9 @@ and (orientation: portrait) {
         /*background-color: #4285F4;*/
         background-color: transparent !important;
     }
+    #userNameLabel {
+        display:none;
+    }
 }
 
 
