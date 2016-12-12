@@ -28,7 +28,7 @@
             console.log("go to 1");
             stepper.goto(stepper.getActiveId());
         }
-        
+
 
         // Just looping and adding listener to event onstepnext to the all steps
         for (var i = 0; i < steps.length; i++) {
